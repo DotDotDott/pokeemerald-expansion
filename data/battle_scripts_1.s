@@ -4025,27 +4025,26 @@ BattleScript_FuryCutterHit:
 
 BattleScript_TryDestinyKnotTarget:
 	jumpifnoholdeffect BS_ATTACKER, HOLD_EFFECT_DESTINY_KNOT, BattleScript_TryDestinyKnotTargetRet
+	infatuatewithbattler BS_TARGET, BS_ATTACKER
 	playanimation BS_ATTACKER, B_ANIM_HELD_ITEM_EFFECT
 	waitanimation
-	printstring STRINGID_DESTINYKNOTACTIVATES
-	tryinfatuating BattleScript_ButItFailed
 	volatileanimation BS_TARGET, VOLATILE_INFATUATION
 	waitanimation
+	printstring STRINGID_DESTINYKNOTACTIVATES
 	waitmessage B_WAIT_TIME_LONG
 BattleScript_TryDestinyKnotTargetRet:
 	return
 
 BattleScript_TryDestinyKnotAttacker:
-	jumpifnoholdeffect BS_TARGET, HOLD_EFFECT_DESTINY_KNOT, BattleScript_TryDestinyKnotTargetRet
+	jumpifnoholdeffect BS_TARGET, HOLD_EFFECT_DESTINY_KNOT, BattleScript_TryDestinyKnotAttackerRet
+	infatuatewithbattler BS_ATTACKER, BS_TARGET
 	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT
 	waitanimation
-	swapattackerwithtarget
-	printstring STRINGID_DESTINYKNOTACTIVATES
-	tryinfatuating BattleScript_SwapTargetAttackerButItFailed
-	swapattackerwithtarget
 	volatileanimation BS_ATTACKER, VOLATILE_INFATUATION
 	waitanimation
+	printstring STRINGID_DESTINYKNOTACTIVATES
 	waitmessage B_WAIT_TIME_LONG
+BattleScript_TryDestinyKnotAttackerRet:
 	return
 
 BattleScript_EffectAttract::
@@ -4378,9 +4377,6 @@ BattleScript_RestoreAttackerButItFailed:
 	goto BattleScript_ButItFailed
 BattleScript_RestoreTargetButItFailed:
 	restoretarget
-	goto BattleScript_ButItFailed
-BattleScript_SwapTargetAttackerButItFailed:
-	swapattackerwithtarget
 	goto BattleScript_ButItFailed
 
 BattleScript_NotAffected::
@@ -5089,8 +5085,8 @@ BattleScript_FaintAttacker::
 	tryrevertweatherform
 	flushtextbox
 	waitanimation
-	tryactivatereceiver BS_ATTACKER
 	tryactivatesoulheart
+	tryactivatereceiver BS_ATTACKER
 	trytrainerslidemsgfirstoff BS_ATTACKER
 	return
 
@@ -5107,8 +5103,8 @@ BattleScript_FaintTarget::
 	tryrevertweatherform
 	flushtextbox
 	waitanimation
-	tryactivatereceiver BS_TARGET
 	tryactivatesoulheart
+	tryactivatereceiver BS_TARGET
 	trytrainerslidemsgfirstoff BS_TARGET
 	return
 
@@ -6834,11 +6830,10 @@ BattleScript_PowderMoveNoEffect::
 	pause B_WAIT_TIME_SHORT
 	jumpiftype BS_TARGET, TYPE_GRASS, BattleScript_PowderMoveNoEffectPrint
 	jumpifability BS_TARGET, ABILITY_OVERCOAT, BattleScript_PowderMoveNoEffectOvercoat
-	setlastuseditem BS_TARGET
 	printstring STRINGID_SAFETYGOGGLESPROTECTED
 	goto BattleScript_PowderMoveNoEffectWaitMsg
 BattleScript_PowderMoveNoEffectOvercoat:
-	call BattleScript_AbilityPopUpTarget
+	call BattleScript_AbilityPopUp
 BattleScript_PowderMoveNoEffectPrint:
 	printstring STRINGID_ITDOESNTAFFECT
 BattleScript_PowderMoveNoEffectWaitMsg:
@@ -7112,7 +7107,7 @@ BattleScript_RecoilEnd::
 	return
 
 BattleScript_ItemSteal::
-	playanimation BS_EFFECT_BATTLER, B_ANIM_ITEM_STEAL
+	playanimation BS_TARGET, B_ANIM_ITEM_STEAL
 	printstring STRINGID_PKMNSTOLEITEM
 	waitmessage B_WAIT_TIME_LONG
 	return
@@ -7290,7 +7285,6 @@ BattleScript_ReceiverActivates::
 	printstring STRINGID_RECEIVERABILITYTAKEOVER
 	waitmessage B_WAIT_TIME_LONG
 	settracedability BS_ABILITY_BATTLER
-	switchinabilities BS_ABILITY_BATTLER
 	return
 
 BattleScript_AbilityHpHeal:
@@ -9123,7 +9117,6 @@ BattleScript_Pickpocket::
 	call BattleScript_AbilityPopUp
 	jumpifability BS_ATTACKER, ABILITY_STICKY_HOLD, BattleScript_PickpocketPrevented
 	swapattackerwithtarget
-	copybyte gEffectBattler, gBattlerTarget
 	call BattleScript_ItemSteal
 	swapattackerwithtarget
 	activateitemeffects

@@ -2627,29 +2627,37 @@ void UpdateLightSprite(struct Sprite *sprite)
         return;
     }
 
-    if (sprite->sLightType == LIGHT_TYPE_BALL)
+    // Note: Don't set window registers during hardware fade!
+    switch (sprite->sLightType)
     {
+    default:
+    case LIGHT_TYPE_BALL:
         if (gPaletteFade.active) // if palette fade is active, don't flicker since the timer won't be updated
         {
+            Weather_SetBlendCoeffs(7, BASE_SHADOW_INTENSITY);
             sprite->invisible = FALSE;
         }
         else if (gPlayerAvatar.tileTransitionState)
         {
+            Weather_SetBlendCoeffs(7, BASE_SHADOW_INTENSITY); // As long as the second coefficient stays 12, shadows will not change
             sprite->invisible = FALSE;
             if (GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) == OBJ_EVENT_PAL_TAG_LIGHT_2)
                 LoadSpritePaletteInSlot(&sObjectEventSpritePalettes[FindObjectEventPaletteIndexByTag(OBJ_EVENT_PAL_TAG_LIGHT)], sprite->oam.paletteNum);
         }
         else if ((sprite->invisible = gTimeUpdateCounter & 1))
         {
+            Weather_SetBlendCoeffs(7, BASE_SHADOW_INTENSITY);
             sprite->invisible = FALSE;
             if (GetSpritePaletteTagByPaletteNum(sprite->oam.paletteNum) == OBJ_EVENT_PAL_TAG_LIGHT_2)
                 LoadSpritePaletteInSlot(&sObjectEventSpritePalettes[FindObjectEventPaletteIndexByTag(OBJ_EVENT_PAL_TAG_LIGHT)], sprite->oam.paletteNum);
         }
-    } else {
+        break;
+    case LIGHT_TYPE_PKMN_CENTER_SIGN:
+    case LIGHT_TYPE_POKE_MART_SIGN:
+        Weather_SetBlendCoeffs(12, BASE_SHADOW_INTENSITY);
         sprite->invisible = FALSE;
+        break;
     }
-    // Note: Don't set window registers during hardware fade!
-    Weather_SetBlendCoeffs(7, BASE_SHADOW_INTENSITY);
 }
 
 // Spawn a light at a map coordinate

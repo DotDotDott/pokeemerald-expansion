@@ -4213,7 +4213,7 @@ static void HandleTurnActionSelectionState(void)
                 else
                 {
                     if (gBattleMons[battler].volatiles.multipleTurns
-                        || gDisableStructs[battler].rechargeTimer > 0)
+                        || gBattleMons[battler].volatiles.recharge)
                     {
                         gChosenActionByBattler[battler] = B_ACTION_USE_MOVE;
                         gBattleCommunication[battler] = STATE_WAIT_ACTION_CONFIRMED_STANDBY;
@@ -4368,7 +4368,7 @@ static void HandleTurnActionSelectionState(void)
                     gBattleCommunication[GetPartnerBattler(battler)] = STATE_BEFORE_ACTION_CHOSEN;
                     RecordedBattle_ClearBattlerAction(battler, 1);
                     if (gBattleMons[GetPartnerBattler(battler)].volatiles.multipleTurns
-                        || gDisableStructs[GetPartnerBattler(battler)].rechargeTimer > 0)
+                        || gBattleMons[GetPartnerBattler(battler)].volatiles.recharge)
                     {
                         BtlController_EmitEndBounceEffect(battler, B_COMM_TO_CONTROLLER);
                         MarkBattlerForControllerExec(battler);
@@ -5132,8 +5132,11 @@ static void TurnValuesCleanUp(bool8 var0)
                 gDisableStructs[i].isFirstTurn--;
 
             if (gDisableStructs[i].rechargeTimer)
+            {
                 gDisableStructs[i].rechargeTimer--;
-
+                if (gDisableStructs[i].rechargeTimer == 0)
+                    gBattleMons[i].volatiles.recharge = FALSE;
+            }
             gBattleStruct->battlerState[i].canPickupItem = FALSE;
         }
 
@@ -5152,7 +5155,7 @@ static void TurnValuesCleanUp(bool8 var0)
     gSideTimers[B_SIDE_PLAYER].followmeTimer = 0;
     gSideTimers[B_SIDE_OPPONENT].followmeTimer = 0;
 
-    gBattleStruct->pledgeMove = FALSE; // combined pledge move may not have been used due to a canceler
+    gBattleStruct->pledgeMove = FALSE; // combined pledge move may not have been used due to a canceller
     ClearPursuitValues();
     ClearDamageCalcResults();
 }
@@ -5665,7 +5668,6 @@ static void FreeResetData_ReturnToOvOrDoEvolutions(void)
         else
             gSaveBlock3Ptr->dexNavChain = 0;
 
-        ClearCurrentTrainerWantRematchVsSeeker();
         gDexNavSpecies = SPECIES_NONE;
         ResetSpriteData();
         if (!(gBattleTypeFlags & (BATTLE_TYPE_LINK

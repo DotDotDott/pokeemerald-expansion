@@ -121,9 +121,19 @@ static bool32 HandleEndTurnOrder(u32 battler)
     gBattleTurnCounter++;
     gBattleStruct->endTurnEventsCounter++;
 
-    for (u32 i = 0; i < gBattlersCount; i++)
+    u32 i, j;
+    for (i = 0; i < gBattlersCount; i++)
+    {
         gBattlerByTurnOrder[i] = i;
-    SortBattlersBySpeed(gBattlerByTurnOrder, FALSE);
+    }
+    for (i = 0; i < gBattlersCount - 1; i++)
+    {
+        for (j = i + 1; j < gBattlersCount; j++)
+        {
+            if (GetWhichBattlerFaster(gBattlerByTurnOrder[i], gBattlerByTurnOrder[j], FALSE) == -1)
+                SwapTurnOrder(i, j);
+        }
+    }
 
     return effect;
 }

@@ -830,3 +830,47 @@ const struct Tileset gTileset_UnionRoom =
     .metatileAttributes = gMetatileAttributes_UnionRoom,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PorytilesPrimaryTest =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesPrimaryTest,
+    .palettes = gTilesetPalettes_PorytilesPrimaryTest,
+    .metatiles = gMetatiles_PorytilesPrimaryTest,
+    .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PorytilesPimaryTutorial =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesPimaryTutorial,
+    .palettes = gTilesetPalettes_PorytilesPimaryTutorial,
+    .metatiles = gMetatiles_PorytilesPimaryTutorial,
+    .metatileAttributes = gMetatileAttributes_PorytilesPimaryTutorial,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PorytilesSecondaryTutorial =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilesSecondaryTutorial,
+    .palettes = gTilesetPalettes_PorytilesSecondaryTutorial,
+    .metatiles = gMetatiles_PorytilesSecondaryTutorial,
+    .metatileAttributes = gMetatileAttributes_PorytilesSecondaryTutorial,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_PorytilesSecondaryTutorialTwo =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PorytilesSecondaryTutorialTwo,
+    .palettes = gTilesetPalettes_PorytilesSecondaryTutorialTwo,
+    .metatiles = gMetatiles_PorytilesSecondaryTutorialTwo,
+    .metatileAttributes = gMetatileAttributes_PorytilesSecondaryTutorialTwo,
+    .callback = NULL,
+};

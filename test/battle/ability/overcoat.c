@@ -7,7 +7,7 @@ SINGLE_BATTLE_TEST("Overcoat blocks powder and spore moves (Gen6+)")
     PARAMETRIZE { gen = GEN_5; }
     PARAMETRIZE { gen = GEN_6; }
     GIVEN {
-        WITH_CONFIG(GEN_CONFIG_POWDER_OVERCOAT, gen);
+        WITH_CONFIG(GEN_CONFIG_POWDER_GRASS, gen);
         ASSUME(IsPowderMove(MOVE_STUN_SPORE));
         PLAYER(SPECIES_WYNAUT);
         OPPONENT(SPECIES_PINECO) { Ability(ABILITY_OVERCOAT); }
@@ -71,29 +71,17 @@ DOUBLE_BATTLE_TEST("Overcoat blocks damage from hail")
     }
 }
 
-SINGLE_BATTLE_TEST("Overcoat blocks Effect Spore's effect (Gen6+)")
+SINGLE_BATTLE_TEST("Overcoat blocks Effect Spore's effect")
 {
-    u32 config;
-    PARAMETRIZE { config = GEN_5; }
-    PARAMETRIZE { config = GEN_6; }
     GIVEN {
-        WITH_CONFIG(GEN_CONFIG_POWDER_OVERCOAT, config);
         PLAYER(SPECIES_PINECO) {Ability(ABILITY_OVERCOAT);}
         OPPONENT(SPECIES_SHROOMISH) {Ability(ABILITY_EFFECT_SPORE);}
     } WHEN {
         TURN { MOVE(player, MOVE_TACKLE, WITH_RNG(RNG_EFFECT_SPORE, 1)); }
     } SCENE {
         MESSAGE("Pineco used Tackle!");
-        if (config == GEN_6) {
-            NOT ABILITY_POPUP(opponent, ABILITY_EFFECT_SPORE);
-        }
-        else {
-            ABILITY_POPUP(opponent, ABILITY_EFFECT_SPORE);
-        }
+        NOT ABILITY_POPUP(opponent, ABILITY_EFFECT_SPORE);
     } THEN {
-        if (config == GEN_6)
-            EXPECT_EQ(player->status1, 0);
-        else
-            EXPECT_NE(player->status1, 0);
+        EXPECT_EQ(player->status1, 0);
     }
 }
