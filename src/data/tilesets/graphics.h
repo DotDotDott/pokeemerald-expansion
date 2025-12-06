@@ -1710,3 +1710,22 @@ const u16 gTilesetPalettes_PorytilesSecondaryTutorialTwo[][16] =
 };
 
 const u32 gTilesetTiles_PorytilesSecondaryTutorialTwo[] = INCBIN_U32("data/tilesets/secondary/porytiles_secondary_tutorial_two/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_PorytilesSec_Foresty[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_PorytilesSec_Foresty[] = INCBIN_U32("data/tilesets/secondary/porytiles_sec_foresty/tiles.4bpp.lz");
