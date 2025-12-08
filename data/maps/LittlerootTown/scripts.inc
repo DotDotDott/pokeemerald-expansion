@@ -1987,9 +1987,9 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 # 994 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_Text_TownSign:
 # 995 "data/maps/LittlerootTown/scripts.pory"
-	.string "LITTLEROOT TOWN\n"
+	.string "SPOURT TOWN\n"
 # 996 "data/maps/LittlerootTown/scripts.pory"
-	.string "“A town that can't be shaded any hue.”$"
+	.string "“--Slogan Pending--.”$"
 # 997 "data/maps/LittlerootTown/scripts.pory"
 
 # 998 "data/maps/LittlerootTown/scripts.pory"
@@ -2030,17 +2030,57 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 # 1016 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
+# 1017 "data/maps/LittlerootTown/scripts.pory"
+	
+# 1018 "data/maps/LittlerootTown/scripts.pory"
+Script_SimpleMsgScript::
+# 1019 "data/maps/LittlerootTown/scripts.pory"
+	lock
+# 1020 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1021 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Text_SimpleMsgScript, MSGBOX_DEFAULT
+# 1022 "data/maps/LittlerootTown/scripts.pory"
+	release
+# 1023 "data/maps/LittlerootTown/scripts.pory"
+	end
+# 1024 "data/maps/LittlerootTown/scripts.pory"
+
+# 1025 "data/maps/LittlerootTown/scripts.pory"
+Text_SimpleMsgScript:
+# 1026 "data/maps/LittlerootTown/scripts.pory"
+	.string "Hi!\n"
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	.string "My name is Adam.\l"
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	.string "What's your name?\p"
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	.string "Nice to meet you, {PLAYER}!$"
 
 LittlerootTown_EventScript_NewSign::
-# 1019 "data/maps/LittlerootTown/scripts.pory"
+# 1032 "data/maps/LittlerootTown/scripts.pory"
 	lockall
-# 1020 "data/maps/LittlerootTown/scripts.pory"
+# 1033 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_NewSign_Text_0
-# 1021 "data/maps/LittlerootTown/scripts.pory"
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+Columbus_NPC_Test::
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1039 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Columbus_NPC_Test_Text_0
+# 1040 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
 LittlerootTown_EventScript_NewSign_Text_0:
-# 1020 "data/maps/LittlerootTown/scripts.pory"
+# 1033 "data/maps/LittlerootTown/scripts.pory"
 	.string "Hello World$"
+
+Columbus_NPC_Test_Text_0:
+# 1039 "data/maps/LittlerootTown/scripts.pory"
+	.string "A Statue of an Espeon.\n it looks cool.$"

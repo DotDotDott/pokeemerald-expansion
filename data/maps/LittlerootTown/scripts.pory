@@ -992,8 +992,8 @@ LittlerootTown_Text_GoodLuckCatchingPokemon:
 	.string "Good luck!$"
 
 LittlerootTown_Text_TownSign:
-	.string "LITTLEROOT TOWN\n"
-	.string "“A town that can't be shaded any hue.”$"
+	.string "SPOURT TOWN\n"
+	.string "“--Slogan Pending--.”$"
 
 LittlerootTown_Text_ProfBirchsLab:
 	.string "PROF. BIRCH'S POKéMON LAB$"
@@ -1014,9 +1014,30 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I gave you?\p"
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
+	
+Script_SimpleMsgScript::
+	lock
+	faceplayer
+	msgbox Text_SimpleMsgScript, MSGBOX_DEFAULT
+	release
+	end
+
+Text_SimpleMsgScript:
+	.string "Hi!\n"
+	.string "My name is Adam.\l"
+	.string "What's your name?\p"
+	.string "Nice to meet you, {PLAYER}!$"
 `
 script LittlerootTown_EventScript_NewSign {
 	lockall	
     msgbox("Hello World")
     releaseall
 }
+
+script Columbus_NPC_Test {
+	lockall	
+    msgbox("A Statue of an Espeon.\n it looks cool.$")
+    releaseall
+}
+
+
