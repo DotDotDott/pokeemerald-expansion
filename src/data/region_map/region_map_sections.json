@@ -2,7 +2,7 @@
   "map_sections": [
     {
       "id": "MAPSEC_LITTLEROOT_TOWN",
-      "name": "Soyabe Town",
+      "name": "Sprout Town",
       "x": 4,
       "y": 11,
       "width": 1,
@@ -130,7 +130,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_101",
-      "name": "Route 65 - Riverside",
+      "name": "I65 - Riverside",
       "x": 4,
       "y": 10,
       "width": 1,
@@ -138,7 +138,7 @@
     },
     {
       "id": "MAPSEC_ROUTE_102",
-      "name": "Route 65 - Flower Path",
+      "name": "I65 - Wild Path",
       "x": 2,
       "y": 9,
       "width": 2,
