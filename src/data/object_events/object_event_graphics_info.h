@@ -4695,7 +4695,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BallLight = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfTulip = { 
     .tileTag = 0xFFFF,
-    .paletteTag = OBJ_EVENT_PAL_TAG_DYNAMIC,
+    .paletteTag = OBJ_EVENT_PAL_PROF_TULIP,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 256,
     .width = 16,
