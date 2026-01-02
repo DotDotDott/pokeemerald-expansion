@@ -222,3 +222,12 @@ const u16 gMetatileAttributes_PorytilesSecondaryTutorialTwo[] = INCBIN_U16("data
 
 const u16 gMetatiles_PorytilesSec_Foresty[] = INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/metatiles.bin");
 const u16 gMetatileAttributes_PorytilesSec_Foresty[] = INCBIN_U16("data/tilesets/secondary/porytiles_sec_foresty/metatile_attributes.bin");
+
+const u16 gMetatiles_PorytilePrimaryBuilding[] = INCBIN_U16("data/tilesets/primary/porytile_primary_building/metatiles.bin");
+const u16 gMetatileAttributes_PorytilePrimaryBuilding[] = INCBIN_U16("data/tilesets/primary/porytile_primary_building/metatile_attributes.bin");
+
+const u16 gMetatiles_porytileInsideOne[] = INCBIN_U16("data/tilesets/primary/porytile_inside_one/metatiles.bin");
+const u16 gMetatileAttributes_porytileInsideOne[] = INCBIN_U16("data/tilesets/primary/porytile_inside_one/metatile_attributes.bin");
+
+const u16 gMetatiles_porytilesInsideOne[] = INCBIN_U16("data/tilesets/secondary/porytiles_inside_one/metatiles.bin");
+const u16 gMetatileAttributes_porytilesInsideOne[] = INCBIN_U16("data/tilesets/secondary/porytiles_inside_one/metatile_attributes.bin");

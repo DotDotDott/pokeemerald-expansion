@@ -885,3 +885,36 @@ const struct Tileset gTileset_PorytilesSec_Foresty =
     .metatileAttributes = gMetatileAttributes_PorytilesSec_Foresty,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_PorytilePrimaryBuilding =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_PorytilePrimaryBuilding,
+    .palettes = gTilesetPalettes_PorytilePrimaryBuilding,
+    .metatiles = gMetatiles_PorytilePrimaryBuilding,
+    .metatileAttributes = gMetatileAttributes_PorytilePrimaryBuilding,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_porytileInsideOne =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_porytileInsideOne,
+    .palettes = gTilesetPalettes_porytileInsideOne,
+    .metatiles = gMetatiles_porytileInsideOne,
+    .metatileAttributes = gMetatileAttributes_porytileInsideOne,
+    .callback = NULL,
+};
+
+const struct Tileset gTileset_porytilesInsideOne =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_porytilesInsideOne,
+    .palettes = gTilesetPalettes_porytilesInsideOne,
+    .metatiles = gMetatiles_porytilesInsideOne,
+    .metatileAttributes = gMetatileAttributes_porytilesInsideOne,
+    .callback = NULL,
+};
