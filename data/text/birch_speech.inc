@@ -1,9 +1,9 @@
 gText_Birch_Welcome::
-	.string "Hi! Sorry to keep you waiting!\p"
-	.string "Welcome to the world of POKéMON!\p"
-	.string "My name is BIRCH.\p"
-	.string "But everyone calls me the POKéMON\n"
-	.string "PROFESSOR.\p"
+	.string "Hi! Sorry to keep you all waiting!\p"
+	.string "Welcome one and anll!\p"
+	.string "My name is Professor Tulipifera.\p"
+	.string "But most just call me the Professor\n"
+	.string "Tulip.\p"
 	.string "$"
 
 gText_Birch_Pokemon::
