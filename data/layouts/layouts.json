@@ -554,30 +554,30 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
       "name": "LittlerootTown_MaysHouse_1F_Layout",
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_porytilesInsideOne",
       "border_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/map.bin"
     },
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
       "name": "LittlerootTown_MaysHouse_2F_Layout",
-      "width": 9,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "width": 11,
+      "height": 12,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_porytilesInsideOne",
       "border_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_2F/map.bin"
     },
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
       "name": "LittlerootTown_ProfessorBirchsLab_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_Lab",
+      "width": 28,
+      "height": 22,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_InsideSPOne",
       "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/map.bin"
     },
@@ -4414,10 +4414,10 @@
     {
       "id": "LAYOUT_NEWER_HOUSE",
       "name": "NewerHouse_Layout",
-      "width": 13,
-      "height": 13,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Lab",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_porytilesInsideOne",
       "border_filepath": "data/layouts/NewerHouse/border.bin",
       "blockdata_filepath": "data/layouts/NewerHouse/map.bin"
     },
@@ -4440,6 +4440,26 @@
       "secondary_tileset": "gTileset_PorytilesSecondaryTutorialTwo",
       "border_filepath": "data/layouts/PorytilesTestMap/border.bin",
       "blockdata_filepath": "data/layouts/PorytilesTestMap/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPROUT_TOWN_HOUSE",
+      "name": "SproutTownHouse_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_porytilesInsideOne",
+      "border_filepath": "data/layouts/SproutTownHouse/border.bin",
+      "blockdata_filepath": "data/layouts/SproutTownHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPROUT_PC_F1",
+      "name": "SproutPC_F1_Layout",
+      "width": 15,
+      "height": 11,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_porytilesInsideOne",
+      "border_filepath": "data/layouts/SproutPC_F1/border.bin",
+      "blockdata_filepath": "data/layouts/SproutPC_F1/map.bin"
     }
   ]
 }

@@ -231,3 +231,6 @@ const u16 gMetatileAttributes_porytileInsideOne[] = INCBIN_U16("data/tilesets/pr
 
 const u16 gMetatiles_porytilesInsideOne[] = INCBIN_U16("data/tilesets/secondary/porytiles_inside_one/metatiles.bin");
 const u16 gMetatileAttributes_porytilesInsideOne[] = INCBIN_U16("data/tilesets/secondary/porytiles_inside_one/metatile_attributes.bin");
+
+const u16 gMetatiles_InsideSPOne[] = INCBIN_U16("data/tilesets/secondary/inside_spone/metatiles.bin");
+const u16 gMetatileAttributes_InsideSPOne[] = INCBIN_U16("data/tilesets/secondary/inside_spone/metatile_attributes.bin");

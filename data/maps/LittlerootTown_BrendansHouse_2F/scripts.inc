@@ -599,22 +599,162 @@ Common_Text_LookCloserAtMap:
 # 300 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
 PlayersHouse_2F_Text_ItsAGameCube:
 # 301 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
-	.string "It's a Nintendo GameCube.\p"
+	.string "It's a Bintendo Gamebox.\p"
 # 302 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
-	.string "A Game Boy Advance is connected to\n"
+	.string "A Game Guy Advance is connected to\n"
 # 303 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
 	.string "serve as the Controller.$"
 
 PlayersHouse_2F_Text_Bookshelf::
-# 306 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
-	lockall
 # 307 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
-	msgbox PlayersHouse_2F_Text_Bookshelf_Text_0
+	lockall
 # 308 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Bookshelf_Text_0
+# 309 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_BigTV::
+# 313 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 314 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_BigTV_Text_0
+# 315 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Pikachu_Pic::
+# 319 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 320 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Pikachu_Pic_Text_0
+# 321 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Apple_Pic::
+# 325 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 326 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Apple_Pic_Text_0
+# 327 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Plant_One::
+# 331 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 332 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Plant_One_Text_0
+# 333 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Plant_Two::
+# 337 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 338 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Plant_Two_Text_0
+# 339 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Player_Bed::
+# 343 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 344 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Player_Bed_Text_0
+# 345 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Sis_PC::
+# 349 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 350 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Sis_PC_Text_0
+# 353 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Sis_Bookshelf_One::
+# 357 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 358 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Sis_Bookshelf_One_Text_0
+# 361 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Sis_Bookshelf_Two::
+# 365 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 366 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Sis_Bookshelf_Two_Text_0
+# 369 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	releaseall
+	return
+
+
+PlayersHouse_2F_Text_Player_Sis_Bed::
+# 373 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	lockall
+# 374 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	msgbox PlayersHouse_2F_Text_Player_Sis_Bed_Text_0
+# 377 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
 	releaseall
 	return
 
 
 PlayersHouse_2F_Text_Bookshelf_Text_0:
-# 307 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
-	.string "test$"
+# 308 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "You looked at your bookshelf.\p There are a bunch of books.$"
+
+PlayersHouse_2F_Text_BigTV_Text_0:
+# 314 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "now's not the time for TV.$"
+
+PlayersHouse_2F_Text_Pikachu_Pic_Text_0:
+# 320 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's a painting of a pikachu\nyour mom made.$"
+
+PlayersHouse_2F_Text_Apple_Pic_Text_0:
+# 326 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's a painting of an Applin\nyour dad made.$"
+
+PlayersHouse_2F_Text_Plant_One_Text_0:
+# 332 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's empty...\pfor now...$"
+
+PlayersHouse_2F_Text_Plant_Two_Text_0:
+# 338 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's also a empty...$"
+
+PlayersHouse_2F_Text_Player_Bed_Text_0:
+# 344 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's your bed.\nWould you like to rest?\p add healing code here$"
+
+PlayersHouse_2F_Text_Sis_PC_Text_0:
+# 350 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's your sister's PC.\p Probably shouldn't go snooping\n around on here...\p again...$"
+
+PlayersHouse_2F_Text_Sis_Bookshelf_One_Text_0:
+# 358 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's one of your sister's bookshelves.\p There seems to be a lot of large comics\n featuring two men falling in love.$"
+
+PlayersHouse_2F_Text_Sis_Bookshelf_Two_Text_0:
+# 366 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's one of your sister's bookshelves.\pThere seems to be a lot of large comics\n featuring two women falling in love.\p Especially a green one that seems to\n be well read.$"
+
+PlayersHouse_2F_Text_Player_Sis_Bed_Text_0:
+# 374 "data/maps/LittlerootTown_BrendansHouse_2F/scripts.pory"
+	.string "It's your sister's bed.\p It looks like she's been struggling\n to sleep well recently.$"

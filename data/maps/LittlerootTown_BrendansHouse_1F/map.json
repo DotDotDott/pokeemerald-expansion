@@ -18,7 +18,7 @@
       "local_id": "LOCALID_PLAYERS_HOUSE_1F_MOM",
       "graphics_id": "OBJ_EVENT_GFX_MOM",
       "x": -7,
-      "y": -4,
+      "y": -5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -29,10 +29,36 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM"
     },
     {
+      "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX",
+      "x": -9,
+      "y": -5,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_RIGHT_AND_LEFT",
+      "movement_range_x": 3,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse_1F_EventScript_Vigoroth2",
+      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_2"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY",
+      "x": -9,
+      "y": -7,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WALK_IN_PLACE_UP",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse_1F_EventScript_Vigoroth1",
+      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_PLAYERS_HOUSE_VIGOROTH_1"
+    },
+    {
       "local_id": "LOCALID_RIVALS_HOUSE_1F_MOM",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_4",
-      "x": -7,
-      "y": -4,
+      "x": -10,
+      "y": -5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -44,9 +70,9 @@
     },
     {
       "local_id": "LOCALID_PLAYERS_HOUSE_1F_DAD",
-      "graphics_id": "OBJ_EVENT_GFX_VAR_0",
-      "x": -7,
-      "y": -5,
+      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "x": -8,
+      "y": -8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
@@ -57,10 +83,23 @@
       "flag": "FLAG_HIDE_PLAYERS_HOUSE_DAD"
     },
     {
+      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
+      "x": -7,
+      "y": -8,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_range_x": 1,
+      "movement_range_y": 1,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "RivalsHouse_1F_EventScript_RivalSibling",
+      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_RIVAL_SIBLING"
+    },
+    {
       "local_id": "LOCALID_RIVALS_HOUSE_1F_RIVAL",
       "graphics_id": "OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL",
-      "x": -7,
-      "y": -5,
+      "x": -11,
+      "y": -8,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -80,7 +119,20 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "PlayersHouse_1F_Text_Mom_One",
+      "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "PlayersHouse_1F_Text_Dad_One",
       "flag": "0"
     }
   ],
@@ -101,5 +153,62 @@
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [
+    {
+      "type": "sign",
+      "x": 11,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Parents_TV"
+    },
+    {
+      "type": "sign",
+      "x": 12,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Parents_TV"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Parents_Bed"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Parents_Bed"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Parents_Bed"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Plant_Three"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 3,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Plant_Three"
+    }
+  ]
 }

@@ -1165,3 +1165,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SoyabeTown/scripts.inc"
 
 	.include "data/maps/PorytilesTestMap/scripts.inc"
+
+	.include "data/maps/SproutPC_F1/scripts.inc"
+
+	.include "data/maps/SproutTownHouse/scripts.inc"
