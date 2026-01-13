@@ -1,0 +1,158 @@
+mapscripts Columbus_PlayerHome_F2_MapScripts {
+	MAP_SCRIPT_ON_TRANSITION: OnTransitionTest
+	MAP_SCRIPT_ON_FRAME_TABLE [
+	VAR_TEMP_2, 0:EveryFrameTest
+	]
+	
+    
+}
+//intro of game stuff
+
+script OnTransitionTest{
+	setvar(VAR_TEMP_2,0)
+	
+}
+
+script EveryFrameTest {
+    if(var(VAR_COLUMBUS_INTRO_STATE) == 0)
+	{
+	lockall
+	setmetatile(2,2,0,26)
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+	msgbox(fromat("Sister: Hey you little brat."))
+	waitmessage
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
+	waitmovement(0)
+	msgbox("Sister: Let's go already")
+	closemessage
+	applymovement(sisIntro, moves( walk_right * 4, walk_down * 7,walk_right))
+	waitmovement(0)
+	removeobject(sisIntro)
+	setflag(FLAG_UNUSED_0x020)
+	setvar(VAR_COLUMBUS_INTRO_STATE, 1)
+	releaseall	
+	}
+	else{
+	setmetatile(2,2,0,26)
+	}
+    setvar(VAR_TEMP_2, 1)
+}
+
+script PlayersHouse_2F_Text_Bookshelf {
+	lockall
+	msgbox(format("You looked at your bookshelf.\p There are a bunch of books."))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_BigTV {
+	lockall
+	msgbox(format("now's not the time for TV."))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Pikachu_Pic {
+	lockall
+	msgbox(format("It's a painting of a pikachu\nyour mom made."))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Apple_Pic {
+	lockall
+	msgbox(format("It's a painting of an Applin\nyour dad made."))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Plant_One {
+	lockall
+	msgbox(format("The trash can is empty"))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Plant_Two {
+	lockall
+	msgbox(format("The trash can is empty aswell"))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Player_Bed {
+	lockall
+	msgbox(format("It's your bed.\nWould you like to rest?\p add healing code here"))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Sis_PC {
+	lockall
+	msgbox(format("It's your sister's PC.\p
+	Probably shouldn't go snooping\n
+	around on here...\p again..."))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Sis_Bookshelf_One {
+	lockall
+	msgbox(format("It's one of your sister's bookshelves.\p
+	There seems to be a lot of large comics\n
+	featuring two men falling in love."))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Sis_Bookshelf_Two {
+	lockall
+	msgbox(format("It's one of your sister's bookshelves.\pThere seems to be a lot of large comics\n featuring two women falling in love.\p
+	Especially a green one that seems to\n
+	be well read."))
+	releaseall
+}
+
+script PlayersHouse_2F_Text_Player_Sis_Bed {
+	lockall
+	msgbox(format("It's your sister's bed.\p
+	It looks like she's been struggling\n
+	to sleep well recently."))
+	releaseall
+}
+
+
+
+script PlayersHouse_2F_Annoyed_Sister {
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+	msgbox(fromat("Sister: Hey you little brat."))
+	waitmessage
+	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
+	waitmovement(0)
+	msgbox("Sister: Let's go already")
+	applymovement(sisIntro, moves( walk_right * 4, walk_down * 7,walk_right))
+	waitmovement(0)
+	removeobject(sisIntro)
+	setflag(FLAG_UNUSED_0x020)
+	//setvar(VAR_COLUMBUS_INTRO_STATE, 1)
+	releaseall	
+}
+
+script OnTransition {
+	msgbox(fromat("Sister: Hey you little brat."))
+	if(var(VAR_COLUMBUS_INTRO_STATE) == 2)
+	{
+	lockall
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+	msgbox(fromat("Sister: Hey you little brat."))
+	waitmessage
+	closemessage
+	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
+	waitmovement(0)
+	msgbox("Sister: Let's go already")
+	closemessage
+	applymovement(sisIntro, moves( walk_right * 4, walk_down * 7,walk_right))
+	waitmovement(0)
+	removeobject(sisIntro)
+	setflag(FLAG_UNUSED_0x020)
+	setvar(VAR_COLUMBUS_INTRO_STATE, 1)
+	releaseall	
+	}
+	else{
+
+	}
+}

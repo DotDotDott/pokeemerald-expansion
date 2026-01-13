@@ -1,8 +1,8 @@
 gText_Birch_Welcome::
 	.string "Hi! Sorry to keep you all waiting!\p"
-	.string "Welcome one and anll!\p"
+	.string "Welcome one and all!\p"
 	.string "My name is Professor Tulipifera.\p"
-	.string "But most just call me the Professor\n"
+	.string "But most just call me Professor\n"
 	.string "Tulip.\p"
 	.string "$"
 
@@ -26,27 +26,32 @@ gText_Birch_MainSpeech::
 	.string "To unravel POKéMON mysteries,\n"
 	.string "I've been undertaking research.\l"
 	.string "That's what I do.\p"
+	.string "Sister: {PLAYER}!!!.\p"
+	.string "Come on already we're gonna be late\p"
 	.string "$"
 
 gText_Birch_AndYouAre::
-	.string "And you are?$"
+	.string "Hello?\p"
+	.string "Which do you want to play as?\p"
+	.string "$"
 
 gText_Birch_BoyOrGirl::
-	.string "Are you a boy?\n"
-	.string "Or are you a girl?$"
+	.string "a girl?\n"
+	.string "Or a boy?$"
 
 gText_Birch_WhatsYourName::
 	.string "All right.\n"
-	.string "What's your name?$"
+	.string "What name do you wanna go by?$"
 
 gText_Birch_SoItsPlayer::
 	.string "So it's {PLAYER}{KUN}?$"
 
 gText_Birch_YourePlayer::
-	.string "Ah, okay!\p"
-	.string "You're {PLAYER}{KUN} who's moving to my\n"
-	.string "hometown of LITTLEROOT.\l"
-	.string "I get it now!\p"
+	.string "Hi! Sorry to keep you all waiting!\p"
+	.string "Welcome one and all!\p"
+	.string "My name is Professor Tulipifera.\p"
+	.string "But most just call me Professor\n"
+	.string "Tulip.\p"
 	.string "$"
 
 gText_Birch_AreYouReady::

@@ -4460,6 +4460,26 @@
       "secondary_tileset": "gTileset_porytilesInsideOne",
       "border_filepath": "data/layouts/SproutPC_F1/border.bin",
       "blockdata_filepath": "data/layouts/SproutPC_F1/map.bin"
+    },
+    {
+      "id": "LAYOUT_COLUMBUS_PLAYER_HOME_F2",
+      "name": "Columbus_PlayerHome_F2_Layout",
+      "width": 11,
+      "height": 18,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_porytilesInsideOne",
+      "border_filepath": "data/layouts/Columbus_PlayerHome_F2/border.bin",
+      "blockdata_filepath": "data/layouts/Columbus_PlayerHome_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_COLUMBUS_PLAYER_HOUSE_F1",
+      "name": "Columbus_PlayerHouse_F1_Layout",
+      "width": 18,
+      "height": 11,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_porytilesInsideOne",
+      "border_filepath": "data/layouts/Columbus_PlayerHouse_F1/border.bin",
+      "blockdata_filepath": "data/layouts/Columbus_PlayerHouse_F1/map.bin"
     }
   ]
 }

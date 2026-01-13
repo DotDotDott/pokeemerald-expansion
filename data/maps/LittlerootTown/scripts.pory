@@ -1040,4 +1040,11 @@ script Columbus_NPC_Test {
     releaseall
 }
 
+script Columbus_Trigger_BlockPath{
+	lockall
+	msgbox("I shouldn't go too far without\na Pokemon")
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_up))
+	waitmovement(0)
+	releaseall
+}
 

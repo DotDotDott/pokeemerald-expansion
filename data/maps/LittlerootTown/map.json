@@ -128,7 +128,7 @@
       "x": 7,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
+      "dest_map": "MAP_COLUMBUS_PLAYER_HOUSE_F1",
       "dest_warp_id": "1"
     },
     {
@@ -161,7 +161,17 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 27,
+      "y": 22,
+      "elevation": 0,
+      "var": "VAR_COLUMBUS_INTRO_STATE",
+      "var_value": "0",
+      "script": "Columbus_Trigger_BlockPath"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",

@@ -1169,3 +1169,7 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/SproutPC_F1/scripts.inc"
 
 	.include "data/maps/SproutTownHouse/scripts.inc"
+
+	.include "data/maps/Columbus_PlayerHome_F2/scripts.inc"
+
+	.include "data/maps/Columbus_PlayerHouse_F1/scripts.inc"

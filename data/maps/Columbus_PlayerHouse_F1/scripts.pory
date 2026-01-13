@@ -1,0 +1,44 @@
+mapscripts Columbus_PlayerHouse_F1_MapScripts {}
+
+script PlayersHouse_1F_Text_Mom_One {
+	lock
+	faceplayer
+	msgbox("Mom: Hello sweeite\nHave a nice day.")
+	release
+}
+
+script PlayersHouse_1F_Text_Dad_One {
+	lockall
+	msgbox("Dad: Hey there kiddo.")
+	releaseall
+}
+
+script PlayersHouse_1F_Text_Parents_Bed {
+	lockall
+	msgbox("It's your parents bed...")
+	releaseall
+}
+
+script PlayersHouse_1F_Text_Parents_TV {
+	lockall
+	msgbox("It's a sitcom about a man\nliving with a talking slowbro.")
+	releaseall
+}
+
+script PlayersHouse_1F_Text_Plant_Three {
+	lockall
+	msgbox("Empty it is...")
+	releaseall
+}
+
+script PlayersHouse_1F_Text_Plant_Four {
+	lockall
+	msgbox("Hey it's me mr. plant!\pDid you know that potted plants\ncan talk!\pOnly to you though, isn't that wild!?")
+	releaseall
+}
+
+script PlayersHouse_1F_Text_Plant_Five {
+	lockall
+	msgbox("Hey kid... you don't wanna know\nthe things ive seen in here...")
+	releaseall
+}
