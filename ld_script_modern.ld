@@ -65,6 +65,7 @@ SECTIONS {
         KEEP(*.o(.text.consts));
         *.o(.text*);
         *.o(.eh_frame);
+		src/mugshot.o(.text);
     } > ROM =0
 
     script_data :
@@ -81,6 +82,7 @@ SECTIONS {
         *libc.a:*.o(.rodata*);
         *libc.a:*.o(.data*);
         sound/songs/*.o(.rodata);
+		src/mugshot.o(.rodata);
     } > ROM =0
 
     .data.iwram :

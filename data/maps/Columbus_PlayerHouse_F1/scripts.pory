@@ -3,7 +3,11 @@ mapscripts Columbus_PlayerHouse_F1_MapScripts {}
 script PlayersHouse_1F_Text_Mom_One {
 	lock
 	faceplayer
-	msgbox("Mom: Hello sweeite\nHave a nice day.")
+	// setvar(VAR_0x8000, MUGSHOT_TEST)
+	// callnative(DrawMugsgot)
+	// msgbox("Mom: Hello sweeite\nHave a nice day.")
+	// callnative(ClearMugshot)
+	msgbox_mugshot("TEST!!!",MSGBOX_NPC,MUGSHOT_TEST)
 	release
 }
 
