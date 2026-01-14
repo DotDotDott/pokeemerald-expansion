@@ -616,7 +616,7 @@ struct EventStates
     u32 arenaTurn:8;
     enum BattleSide battlerSide:4;
     enum BattlerId moveEndBattler:4;
-    enum FirstTurnEventsStates beforeFristTurn:8;
+    enum FirstTurnEventsStates beforeFirstTurn:8;
     enum FaintedActions faintedAction:8;
     enum BattlerId faintedActionBattler:4;
     enum MoveSuccessOrder atkCanceler:8;
@@ -907,7 +907,7 @@ struct BattleScripting
     u8 specialTrainerBattleType;
     bool8 monCaught;
     s32 savedDmg;
-    u16 savedMoveEffect; // For moves hitting multiple targets.
+    u16 unused_0x2c;
     u16 moveEffect;
     u16 unused_0x30;
     u8 illusionNickHack; // To properly display nick in STRINGID_ENEMYABOUTTOSWITCHPKMN.

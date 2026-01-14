@@ -408,8 +408,7 @@ BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMons::
 BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMonsLv50::
 # 205 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLv50, MSGBOX_DEFAULT
-	call BattleFrontier_ShowCaughtBannedSpecies
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
+# 206 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	goto BattleFrontier_BattlePalaceLobby_EventScript_EndCancelChallenge
 # 207 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 
@@ -417,8 +416,7 @@ BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMonsLv50::
 BattleFrontier_BattlePalaceLobby_EventScript_NotEnoughValidMonsLvOpen::
 # 209 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLvOpen, MSGBOX_DEFAULT
-	call BattleFrontier_ShowCaughtBannedSpecies
-	msgbox BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
+# 210 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	goto BattleFrontier_BattlePalaceLobby_EventScript_EndCancelChallenge
 # 211 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 
@@ -860,9 +858,9 @@ BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLv50:
 	.string "They also must not be holding\n"
 # 430 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	.string "the same kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
-
-BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsEnd:
+# 431 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
+	.string "EGGS{STR_VAR_1} ineligible.\p"
+# 432 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	.string "Come back when you have made\n"
 # 433 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	.string "your preparations.$"
@@ -884,7 +882,13 @@ BattleFrontier_BattlePalaceLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "They also must not be holding\n"
 # 442 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 	.string "the same kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
+# 443 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
+	.string "EGGS{STR_VAR_1} ineligible.\p"
+# 444 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
+	.string "Come back when you have made\n"
+# 445 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
+	.string "your preparations.$"
+# 446 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 
 # 447 "data/maps/BattleFrontier_BattlePalaceLobby/scripts.pory"
 BattleFrontier_BattlePalaceLobby_Text_NowSelectThreeMons:

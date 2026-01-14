@@ -4709,6 +4709,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ProfTulip = {
     .subspriteTables = sOamTables_16x32,
     .anims = sAnimTable_Standard,
     .images = gObjectEventPicTable_ProfTulip,
+};
+
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ApricornTree = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,

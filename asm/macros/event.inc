@@ -2682,7 +2682,7 @@
 	callnative DrawMugshot
 	msgbox \msgText, \msgType
 	callnative ClearMugshot
-
+	.endm
 	
 	@ Manually buffer a string as the speaker's name for namebox.
 	@ The next shown message/msgbox will include a namebox, if the provided string is not NULL.

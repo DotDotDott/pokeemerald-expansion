@@ -368,8 +368,7 @@ BattleFrontier_BattleArenaLobby_EventScript_NotEnoughValidMons::
 BattleFrontier_BattleArenaLobby_EventScript_NotEnoughValidMonsLv50::
 # 185 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	msgbox BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLv50, MSGBOX_DEFAULT
-	call BattleFrontier_ShowCaughtBannedSpecies
-	msgbox BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
+# 186 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	goto BattleFrontier_BattleArenaLobby_EventScript_EndCancelChallenge
 # 187 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 
@@ -377,8 +376,7 @@ BattleFrontier_BattleArenaLobby_EventScript_NotEnoughValidMonsLv50::
 BattleFrontier_BattleArenaLobby_EventScript_NotEnoughValidMonsLvOpen::
 # 189 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	msgbox BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLvOpen, MSGBOX_DEFAULT
-	call BattleFrontier_ShowCaughtBannedSpecies
-	msgbox BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsEnd, MSGBOX_DEFAULT
+# 190 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	goto BattleFrontier_BattleArenaLobby_EventScript_EndCancelChallenge
 # 191 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 
@@ -824,9 +822,9 @@ BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLvOpen:
 	.string "They also must not hold the same\n"
 # 412 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
-
-BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsEnd:
+# 413 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
+	.string "EGGS{STR_VAR_1} ineligible.\p"
+# 414 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	.string "When you have made your preparations,\n"
 # 415 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	.string "please do return.$"
@@ -852,7 +850,13 @@ BattleFrontier_BattleArenaLobby_Text_NotEnoughValidMonsLv50:
 	.string "They also must not hold the same\n"
 # 426 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 	.string "kinds of items.\p"
-	.string "EGGS{STR_VAR_1}.$"
+# 427 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
+	.string "EGGS{STR_VAR_1} ineligible.\p"
+# 428 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
+	.string "When you have made your preparations,\n"
+# 429 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
+	.string "please do return.$"
+# 430 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 
 # 431 "data/maps/BattleFrontier_BattleArenaLobby/scripts.pory"
 BattleFrontier_BattleArenaLobby_Text_GuideYouToArena:

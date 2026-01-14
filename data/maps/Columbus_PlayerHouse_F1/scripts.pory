@@ -13,6 +13,8 @@ script PlayersHouse_1F_Text_Mom_One {
 
 script PlayersHouse_1F_Text_Dad_One {
 	lockall
+	faceplayer
+	setspeaker("Dad")
 	msgbox("Dad: Hey there kiddo.")
 	releaseall
 }
