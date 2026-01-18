@@ -1664,8 +1664,94 @@
 #define SPECIES_ZYGARDE_MEGA                            1547
 #define SPECIES_DRAMPA_MEGA                             1548
 #define SPECIES_FALINKS_MEGA                            1549
+//My Forms
+#define SPECIES_TEDDIURSA_MIDWEST                       1550
+#define SPECIES_URSARING_MIDWEST                        1551
+#define SPECIES_URSALUNA_MIDWEST                        1552
 
-#define SPECIES_EGG                                     (SPECIES_FALINKS_MEGA + 1)
+#define SPECIES_FENNEKIN_MIDWEST                        1553
+#define SPECIES_BRAIXEN_MIDWEST                         1554
+#define SPECIES_DELPHOX_MIDWEST                         1555
+
+#define SPECIES_CHIMCHAR_MIDWEST                        1556
+#define SPECIES_MONFERNO_MIDWEST                        1557
+#define SPECIES_INFERNAPE_MIDWEST                       1558
+
+#define SPECIES_ROWLET_MIDWEST                          1559
+#define SPECIES_DARTRIX_MIDWEST                         1560
+#define SPECIES_DECIDUEYE_MIDWEST                       1561
+
+#define SPECIES_STARLY_MIDWEST                          1562
+#define SPECIES_STARAVIA_MIDWEST                        1563
+#define SPECIES_STARAPTOR_MIDWEST                       1564
+
+#define SPECIES_STANTLER_MIDWEST                        1565
+
+#define SPECIES_GRIMER_MIDWEST                          1566
+#define SPECIES_MUK_MIDWEST                             1567
+
+#define SPECIES_SWABLU_MIDWEST                          1568
+#define SPECIES_ALTARIA_MIDWEST                         1569
+
+#define SPECIES_SPINARAK_MIDWEST                        1570
+#define SPECIES_ARIADOS_MIDWEST                         1571
+
+#define SPECIES_TAILLOW_MIDWEST                         1572
+#define SPECIES_SWELLOW_MIDWEST                         1573
+
+#define SPECIES_EKANS_MIDWEST                           1574
+#define SPECIES_ARBOK_MIDWEST                           1575
+
+#define SPECIES_BEEDRILL_MIDWEST                        1576
+
+#define SPECIES_SMOLIV_MIDWEST                          1577
+#define SPECIES_DOLLIV_MIDWEST                          1578
+#define SPECIES_ARBOLIVA_MIDWEST                        1579
+
+#define SPECIES_TURTWIG_MIDWEST                         1580
+#define SPECIES_GROTLE_MIDWEST                          1581
+#define SPECIES_TORTERRA_MIDWEST                        1582
+
+#define SPECIES_REMORAID_MIDWEST                        1583
+#define SPECIES_OCTILLERY_MIDWEST                       1584
+
+#define SPECIES_VOLTORB_MIDWEST                         1585
+#define SPECIES_ELECTRODE_MIDWEST                       1586
+
+
+#define SPECIES_DEERLING_MIDWEST                        1587
+#define SPECIES_SAWSBUCK_MIDWEST_PSYCHIC                1588
+#define SPECIES_SAWSBUCK_MIDWEST                        SPECIES_SAWSBUCK_MIDWEST_PSYCHIC
+#define SPECIES_SAWSBUCK_MIDWEST_ELECTRIC               1589
+#define SPECIES_SAWSBUCK_MIDWEST_ICE                    1590
+
+#define SPECIES_VOLBEAT_MIDWEST                         1591
+#define SPECIES_ILLUMISE_MIDWEST                        1592
+#define SPECIES_ILLUMISE_MIDWEST_STEEL                  1593
+
+#define SPECIES_LEDIAN_MIDWEST                     SPECIES_LEDIAN_MIDWEST_RED
+#define SPECIES_LEDIAN_MIDWEST_RED                      1594
+
+#define SPECIES_LEDIAN_MIDWEST_BLUE                     1595
+#define SPECIES_LEDIAN_MIDWEST_YELLOW                   1596
+#define SPECIES_LEDIAN_MIDWEST_PINK                     1597
+#define SPECIES_LEDIAN_MIDWEST_GREEN                    1598
+#define SPECIES_LEDIAN_MIDWEST_EVIL                     1599
+#define SPECIES_LEDIAN_MIDWEST_SUPER                    1600
+#define SPECIES_LEDIAN_MIDWEST_DRACO                    1601
+#define SPECIES_LEDIAN_MIDWEST_BLACK                    1602
+
+#define SPECIES_MEOWTH_MIDWEST                          1603
+#define SPECIES_PERSIAN_MIDWEST                         1604
+
+#define SPECIES_SKITTY_MIDWEST                          1605
+#define SPECIES_DELCATTY_MIDWEST                        1606
+
+#define SPECIES_SWIRLIX_MIDWEST                         1607
+#define SPECIES_SLURPUFF_MIDWEST                        1608
+
+
+#define SPECIES_EGG                                     (SPECIES_SLURPUFF_MIDWEST + 1)
 
 #define NUM_SPECIES SPECIES_EGG
 

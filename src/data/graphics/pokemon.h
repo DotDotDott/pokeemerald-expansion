@@ -8565,6 +8565,12 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonPalette_Teddiursa[] = INCBIN_U16("graphics/pokemon/teddiursa/normal.gbapal");
     const u32 gMonBackPic_Teddiursa[] = INCBIN_U32("graphics/pokemon/teddiursa/back.4bpp.smol");
     const u16 gMonShinyPalette_Teddiursa[] = INCBIN_U16("graphics/pokemon/teddiursa/shiny.gbapal");
+
+    //Midwesteern Form
+    const u32 gMonFrontPic_TeddiursaMidwest[] = INCBIN_U32("graphics/pokemon/teddiursa/midwest/anim_front.4bpp.smol");
+    const u16 gMonPalette_TeddiursaMidwest[] = INCBIN_U16("graphics/pokemon/teddiursa/midwest/normal.gbapal");
+    const u32 gMonBackPic_TeddiursaMidwest[] = INCBIN_U32("graphics/pokemon/teddiursa/midwest/back.4bpp.smol");
+    const u16 gMonShinyPalette_TeddiursaMidwest[] = INCBIN_U16("graphics/pokemon/teddiursa/midwest/shiny.gbapal");
 #else
     const u32 gMonFrontPic_Teddiursa[] = INCBIN_U32("graphics/pokemon/teddiursa/anim_front_gba.4bpp.smol");
     const u16 gMonPalette_Teddiursa[] = INCBIN_U16("graphics/pokemon/teddiursa/normal_gba.gbapal");
@@ -8572,12 +8578,16 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
     const u16 gMonShinyPalette_Teddiursa[] = INCBIN_U16("graphics/pokemon/teddiursa/shiny_gba.gbapal");
 #endif //P_GBA_STYLE_SPECIES_GFX
 #if !P_GBA_STYLE_SPECIES_ICONS
-    const u8 gMonIcon_Teddiursa[] = INCBIN_U8("graphics/pokemon/teddiursa/icon.4bpp");
+    const u8 gMonIcon_Teddiursa[] = INCBIN_U8("graphics/pokemon/teddiursa/midwest/icon.4bpp");
+
+    const u8 gMonIcon_TeddiursaMidwest[] = INCBIN_U8("graphics/pokemon/teddiursa/icon.4bpp");
 #else
     const u8 gMonIcon_Teddiursa[] = INCBIN_U8("graphics/pokemon/teddiursa/icon_gba.4bpp");
 #endif //P_GBA_STYLE_SPECIES_ICONS
 #if P_FOOTPRINTS
     const u8 gMonFootprint_Teddiursa[] = INCBIN_U8("graphics/pokemon/teddiursa/footprint.1bpp");
+
+    const u8 gMonFootprint_TeddiursaMidwest[] = INCBIN_U8("graphics/pokemon/teddiursa/midwest/footprint.1bpp");
 #endif //P_FOOTPRINTS
 #if OW_POKEMON_OBJECT_EVENTS
     const u32 gObjectEventPic_Teddiursa[] = INCBIN_COMP("graphics/pokemon/teddiursa/overworld.4bpp");

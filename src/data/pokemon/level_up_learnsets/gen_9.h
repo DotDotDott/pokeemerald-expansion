@@ -6149,6 +6149,24 @@ static const struct LevelUpMove sTeddiursaLevelUpLearnset[] = {
     LEVEL_UP_END
 };
 
+static const struct LevelUpMove sTeddiursaMidWestLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
+    LEVEL_UP_MOVE( 1, MOVE_LICK),
+    LEVEL_UP_MOVE( 1, MOVE_BITE),
+    LEVEL_UP_MOVE( 1, MOVE_BABY_DOLL_EYES),
+    LEVEL_UP_MOVE( 8, MOVE_FURY_SWIPES),
+    LEVEL_UP_MOVE(13, MOVE_PAYBACK),
+    LEVEL_UP_MOVE(17, MOVE_SWEET_SCENT),
+    LEVEL_UP_MOVE(22, MOVE_SLASH),
+    LEVEL_UP_MOVE(25, MOVE_PLAY_NICE),
+    LEVEL_UP_MOVE(29, MOVE_PLAY_ROUGH),
+    LEVEL_UP_MOVE(33, MOVE_CHARM),
+    LEVEL_UP_MOVE(37, MOVE_REST),
+    LEVEL_UP_MOVE(37, MOVE_SNORE),
+    LEVEL_UP_MOVE(41, MOVE_THRASH),
+    LEVEL_UP_END
+};
+
 static const struct LevelUpMove sUrsaringLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_LEER),

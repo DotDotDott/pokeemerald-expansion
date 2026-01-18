@@ -2085,6 +2085,25 @@ static const u16 sTeddiursaEggMoveLearnset[] = {
     MOVE_PLAY_ROUGH,
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sTeddiursaMidwestEggMoveLearnset[] = {
+    MOVE_CRUNCH,
+    MOVE_TAKE_DOWN,
+    MOVE_SEISMIC_TOSS,
+    MOVE_COUNTER,
+    MOVE_METAL_CLAW,
+    MOVE_FAKE_TEARS,
+    MOVE_YAWN,
+    MOVE_SLEEP_TALK,
+    MOVE_CROSS_CHOP,
+    MOVE_DOUBLE_EDGE,
+    MOVE_CLOSE_COMBAT,
+    MOVE_NIGHT_SLASH,
+    MOVE_BELLY_DRUM,
+    MOVE_CHIP_AWAY,
+    MOVE_PLAY_ROUGH,
+    MOVE_UNAVAILABLE,
+};
 #endif //P_FAMILY_TEDDIURSA
 
 #if P_FAMILY_SLUGMA

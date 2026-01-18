@@ -362,6 +362,8 @@ static const enum NationalDexOrder sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     HOENN_TO_NATIONAL(RAYQUAZA),
     HOENN_TO_NATIONAL(JIRACHI),
     HOENN_TO_NATIONAL(DEOXYS),
+    HOENN_TO_NATIONAL(TEDDIURSA),
+    HOENN_TO_NATIONAL(URSARING),
 };
 
 const struct SpindaSpot gSpindaSpotGraphics[] =
@@ -7396,7 +7398,8 @@ bool32 IsSpeciesRegionalForm(u32 species)
     return gSpeciesInfo[species].isAlolanForm
         || gSpeciesInfo[species].isGalarianForm
         || gSpeciesInfo[species].isHisuianForm
-        || gSpeciesInfo[species].isPaldeanForm;
+        || gSpeciesInfo[species].isPaldeanForm
+        || gSpeciesInfo[species].isMidwesternForm;
 }
 
 bool32 IsSpeciesRegionalFormFromRegion(u32 species, u32 region)
@@ -7407,6 +7410,7 @@ bool32 IsSpeciesRegionalFormFromRegion(u32 species, u32 region)
     case REGION_GALAR:  return gSpeciesInfo[species].isGalarianForm;
     case REGION_HISUI:  return gSpeciesInfo[species].isHisuianForm;
     case REGION_PALDEA: return gSpeciesInfo[species].isPaldeanForm;
+    case REGION_MIDWEST: return gSpeciesInfo[species].isMidwesternForm;
     default:            return FALSE;
     }
 }
