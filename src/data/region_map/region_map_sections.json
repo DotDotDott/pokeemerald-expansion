@@ -3,8 +3,8 @@
     {
       "id": "MAPSEC_LITTLEROOT_TOWN",
       "name": "Sprout Town",
-      "x": 4,
-      "y": 11,
+      "x": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },
@@ -131,25 +131,25 @@
     {
       "id": "MAPSEC_ROUTE_101",
       "name": "I65 - Riverside",
-      "x": 4,
-      "y": 10,
-      "width": 1,
+      "x": 8,
+      "y": 9,
+      "width": 2,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_102",
       "name": "I65 - Wild Path",
-      "x": 2,
-      "y": 9,
+      "x": 8,
+      "y": 8,
       "width": 2,
       "height": 1
     },
     {
       "id": "MAPSEC_ROUTE_103",
       "name": "Spourt Park",
-      "x": 4,
-      "y": 8,
-      "width": 4,
+      "x": 10,
+      "y": 9,
+      "width": 1,
       "height": 1
     },
     {
@@ -491,8 +491,8 @@
     {
       "id": "MAPSEC_ABANDONED_SHIP",
       "name": "ABANDONED SHIP",
-      "x": 6,
-      "y": 14,
+      "x": 7,
+      "y": 9,
       "width": 1,
       "height": 1
     },
