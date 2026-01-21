@@ -1038,6 +1038,7 @@ script Columbus_NPC_Test {
 	lockall	
     msgbox("A Statue of an Espeon.\n it looks cool.$")
     releaseall
+	openquestmenu
 }
 
 script Columbus_Trigger_BlockPath{

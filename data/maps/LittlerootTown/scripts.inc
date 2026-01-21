@@ -2074,26 +2074,28 @@ Columbus_NPC_Test::
 	msgbox Columbus_NPC_Test_Text_0
 # 1040 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
+# 1041 "data/maps/LittlerootTown/scripts.pory"
+	openquestmenu
 	return
 
 
 Columbus_Trigger_BlockPath::
-# 1044 "data/maps/LittlerootTown/scripts.pory"
-	lockall
 # 1045 "data/maps/LittlerootTown/scripts.pory"
-	msgbox Columbus_Trigger_BlockPath_Text_0
+	lockall
 # 1046 "data/maps/LittlerootTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_BlockPath_Movement_0
+	msgbox Columbus_Trigger_BlockPath_Text_0
 # 1047 "data/maps/LittlerootTown/scripts.pory"
-	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_BlockPath_Movement_0
 # 1048 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement 0
+# 1049 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
-# 1046 "data/maps/LittlerootTown/scripts.pory"
+# 1047 "data/maps/LittlerootTown/scripts.pory"
 Columbus_Trigger_BlockPath_Movement_0:
-# 1046 "data/maps/LittlerootTown/scripts.pory"
+# 1047 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
 	step_end
 
@@ -2106,5 +2108,5 @@ Columbus_NPC_Test_Text_0:
 	.string "A Statue of an Espeon.\n it looks cool.$"
 
 Columbus_Trigger_BlockPath_Text_0:
-# 1045 "data/maps/LittlerootTown/scripts.pory"
+# 1046 "data/maps/LittlerootTown/scripts.pory"
 	.string "I shouldn't go too far without\na Pokemon$"
