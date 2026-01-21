@@ -1707,6 +1707,19 @@ static void MoveSelectionDisplayMoveType(u32 battler)
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
 }
 
+static const u8 sMoveDescNeutralColors[3] = {14, TEXT_DYNAMIC_COLOR_4, TEXT_DYNAMIC_COLOR_6};
+static const u8 sMoveDescPositiveColors[3] = {14, TEXT_COLOR_GREEN, TEXT_COLOR_LIGHT_RED};
+static const u8 sMoveDescNegativeColors[3] = {14, TEXT_COLOR_WHITE, TEXT_COLOR_LIGHT_GRAY};
+
+static u8 *AppendMoveDescColors(u8 *dest, const u8 *colors)
+{
+    dest = WriteColorChangeControlCode(dest, 0, colors[1]);
+    dest = WriteColorChangeControlCode(dest, 2, colors[0]);
+    dest = WriteColorChangeControlCode(dest, 1, colors[2]);
+    return dest;
+}
+
+
 static void TryMoveSelectionDisplayMoveDescription(u32 battler)
 {
     if (!B_SHOW_MOVE_DESCRIPTION)
@@ -1720,52 +1733,134 @@ static void MoveSelectionDisplayMoveDescription(u32 battler)
 {
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct*)(&gBattleResources->bufferA[battler][4]);
     u16 move = moveInfo->moves[gMoveSelectionCursor[battler]];
+    u16 displayMove = move;
     u16 pwr = GetMovePower(move);
     u16 acc = GetMoveAccuracy(move);
+    u16 basePwr = pwr;
+    u16 baseAcc = acc;
     enum DamageCategory cat = GetBattleMoveCategory(move);
+    enum BattleMoveEffects moveEffect = GetMoveEffect(move);
+    bool32 isMaxMove = (GetActiveGimmick(battler) == GIMMICK_DYNAMAX
+                     || IsGimmickSelected(battler, GIMMICK_DYNAMAX));
 
-    if (GetActiveGimmick(battler) == GIMMICK_DYNAMAX || IsGimmickSelected(battler, GIMMICK_DYNAMAX))
+    if (isMaxMove)
     {
         pwr = GetMaxMovePower(move);
-        move = GetMaxMove(battler, move);
+        displayMove = GetMaxMove(battler, move);
         acc = 0;
+        basePwr = pwr;
+        baseAcc = acc;
+    }
+    else if (B_DYNAMIC_MOVE_INFO
+        && move != MOVE_NONE && move != MOVE_UNAVAILABLE
+        && moveEffect != EFFECT_KNOCK_OFF
+        && moveEffect != EFFECT_BRINE
+        && moveEffect != EFFECT_LOW_KICK)
+    {
+        struct DamageContext ctx = {0};
+
+        ctx.battlerAtk = battler;
+        ctx.battlerDef = BATTLE_OPPOSITE(battler);
+        ctx.move = move;
+        ctx.moveType = CheckDynamicMoveType(GetBattlerMon(battler), move, battler, MON_IN_BATTLE);
+        ctx.weather = gBattleWeather;
+        ctx.updateFlags = FALSE;
+        ctx.abilityAtk = GetBattlerAbility(battler);
+        ctx.abilityDef = ABILITY_NONE;
+        ctx.holdEffectAtk = GetBattlerHoldEffect(battler);
+        ctx.holdEffectDef = HOLD_EFFECT_NONE;
+        ctx.chosenMove = move;
+
+        if (IsBattleMoveStatus(move))
+            pwr = 0;
+        else
+            pwr = CalcMoveBasePowerAfterModifiers(&ctx);
+
+        acc = GetTotalAccuracy(ctx.battlerAtk, ctx.battlerDef, ctx.move,
+                               ctx.abilityAtk, ctx.abilityDef,
+                               ctx.holdEffectAtk, ctx.holdEffectDef);
+
+        if (acc > 100)
+            acc = 100;
     }
 
-    u8 pwr_num[3], acc_num[3];
+    u8 pwr_num[4], acc_num[4];
     u8 cat_desc[7] = _("CAT: ");
     u8 pwr_desc[7] = _("PWR: ");
     u8 acc_desc[7] = _("ACC: ");
     u8 cat_start[] = _("{CLEAR_TO 0x03}");
-    u8 pwr_start[] = _("{CLEAR_TO 0x38}");
+    u8 pwr_start[] = _("{CLEAR_TO 0x34}");
     u8 acc_start[] = _("{CLEAR_TO 0x6D}");
+    u8 pwr_value_start[] = _("{CLEAR_TO 0x4A}");
+    u8 acc_value_start[] = _("{CLEAR_TO 0x82}");
+
+    // Display power
+    if (pwr < 2) // Status move or no power
+    {
+        StringCopy(pwr_num, gText_BattleSwitchWhich5); // Use "-" for no power
+    }
+    else
+    {
+        ConvertIntToDecimalStringN(pwr_num, pwr, STR_CONV_MODE_LEFT_ALIGN, 3);
+    }
+
+    // Display accuracy
+    if (acc < 2) // No accuracy specified
+    {
+        StringCopy(acc_num, gText_BattleSwitchWhich5); // Use "-" for no accuracy
+    }
+    else
+    {
+        ConvertIntToDecimalStringN(acc_num, acc, STR_CONV_MODE_LEFT_ALIGN, 3);
+    }
+
+    // Choose text colors
+    const u8 *pwrColors = sMoveDescNeutralColors;
+    const u8 *accColors = sMoveDescNeutralColors;
+
+    if (B_DYNAMIC_MOVE_INFO_COLORS)
+    {
+        if (pwr > basePwr)
+            pwrColors = sMoveDescPositiveColors;
+        else if (pwr < basePwr)
+            pwrColors = sMoveDescNegativeColors;
+
+        if (acc > baseAcc)
+            accColors = sMoveDescPositiveColors;
+        else if (acc < baseAcc)
+            accColors = sMoveDescNegativeColors;
+    }
+
+    // Prepare the main description text for B_WIN_MOVE_DESCRIPTION
+    u8 *txtPtr = gDisplayedStringBattle;
+
+    txtPtr = StringCopy(txtPtr, cat_start);
+    txtPtr = StringCopy(txtPtr, cat_desc);
+    txtPtr = StringCopy(txtPtr, pwr_start);
+    txtPtr = StringCopy(txtPtr, pwr_desc);
+    txtPtr = StringCopy(txtPtr, pwr_value_start);
+    txtPtr = AppendMoveDescColors(txtPtr, pwrColors);
+    txtPtr = StringCopy(txtPtr, pwr_num);
+    txtPtr = AppendMoveDescColors(txtPtr, sMoveDescNeutralColors);
+    txtPtr = StringCopy(txtPtr, acc_start);
+    txtPtr = StringCopy(txtPtr, acc_desc);
+    txtPtr = StringCopy(txtPtr, acc_value_start);
+    txtPtr = AppendMoveDescColors(txtPtr, accColors);
+    txtPtr = StringCopy(txtPtr, acc_num);
+    txtPtr = AppendMoveDescColors(txtPtr, sMoveDescNeutralColors);
+    txtPtr = StringCopy(txtPtr, gText_NewLine);
+    StringCopy(txtPtr, GetMoveDescription(displayMove));
+
+    // Draw the main description box with a border
     LoadMessageBoxAndBorderGfx();
     DrawStdWindowFrame(B_WIN_MOVE_DESCRIPTION, FALSE);
-    if (pwr < 2)
-        StringCopy(pwr_num, gText_BattleSwitchWhich5);
-    else
-        ConvertIntToDecimalStringN(pwr_num, pwr, STR_CONV_MODE_LEFT_ALIGN, 3);
-    if (acc < 2)
-        StringCopy(acc_num, gText_BattleSwitchWhich5);
-    else
-        ConvertIntToDecimalStringN(acc_num, acc, STR_CONV_MODE_LEFT_ALIGN, 3);
-    StringCopy(gDisplayedStringBattle, cat_start);
-    StringAppend(gDisplayedStringBattle, cat_desc);
-    StringAppend(gDisplayedStringBattle, pwr_start);
-    StringAppend(gDisplayedStringBattle, pwr_desc);
-    StringAppend(gDisplayedStringBattle, pwr_num);
-    StringAppend(gDisplayedStringBattle, acc_start);
-    StringAppend(gDisplayedStringBattle, acc_desc);
-    StringAppend(gDisplayedStringBattle, acc_num);
-    StringAppend(gDisplayedStringBattle, gText_NewLine);
-    StringAppend(gDisplayedStringBattle, GetMoveDescription(move));
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_DESCRIPTION);
 
+    // Draw the category icon as usual
     if (gCategoryIconSpriteId == 0xFF)
         gCategoryIconSpriteId = CreateSprite(&gSpriteTemplate_CategoryIcons, 38, 64, 1);
 
     StartSpriteAnim(&gSprites[gCategoryIconSpriteId], cat);
-
-    CopyWindowToVram(B_WIN_MOVE_DESCRIPTION, COPYWIN_FULL);
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 baseTileNum)
