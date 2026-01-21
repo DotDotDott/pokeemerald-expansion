@@ -376,7 +376,3 @@
 #define B_POOL_RULE_Z_CRYSTAL_CLAUSE        FALSE    // Pick only 1 mon with Z-crystal
 
 #endif // GUARD_CONFIG_BATTLE_H
-
-#define B_BATTLE_SPEED 0 // Usage with a variable
-
-#endif // GUARD_CONFIG_BATTLE_H
