@@ -1702,14 +1702,6 @@ const u32 gCategoryIcons_Gfx[] = INCBIN_U32("graphics/interface/category_icons.4
 const u32 gMoveTypes_Gfx[] = INCBIN_U32("graphics/types/move_types.4bpp.smol");
 const u16 gMoveTypes_Pal[] = INCBIN_U16("graphics/types/move_types.gbapal");
 
-#if P_SUMMARY_SCREEN_NEW_TYPE_ICONS
-const u32 gMoveTypes_Gfx_New[] = INCBIN_U32("graphics/types_new/move_types_new.4bpp.lz");
-const u32 gMoveTypes_Pal_New[] = INCBIN_U32("graphics/types_new/move_types_new.gbapal.lz");
-#else
-const u32 gMoveTypes_Gfx[] = INCBIN_U32("graphics/types/move_types.4bpp.lz");
-const u32 gMoveTypes_Pal[] = INCBIN_U32("graphics/types/move_types.gbapal.lz");
-#endif
-
 const u32 gSummaryMoveSelect_Gfx[] = INCBIN_U32("graphics/summary_screen/move_select.4bpp.smol");
 const u16 gSummaryMoveSelect_Pal[] = INCBIN_U16("graphics/summary_screen/move_select.gbapal");
 
@@ -1724,16 +1716,6 @@ const u32 gSummaryPage_Skills_Tilemap[]       = INCBIN_U32("graphics/summary_scr
 const u32 gSummaryPage_BattleMoves_Tilemap[]  = INCBIN_U32("graphics/summary_screen/page_battle_moves.bin.smolTM");
 const u32 gSummaryPage_ContestMoves_Tilemap[] = INCBIN_U32("graphics/summary_screen/page_contest_moves.bin.smolTM");
 const u32 gSummaryPage_InfoEgg_Tilemap[]      = INCBIN_U32("graphics/summary_screen/page_info_egg.bin.smolTM");
-const u32 gSummaryScreen_Pal[]                = INCBIN_U32("graphics/summary_screen/tiles.gbapal.lz");
-#if P_SUMMARY_SCREEN_EXPAND_ABILITY_DESCRIPTION
-const u32 gSummaryPage_Info_Tilemap[]         = INCBIN_U32("graphics/summary_screen/page_info_expanded.bin.lz");
-#else
-const u32 gSummaryPage_Info_Tilemap[]         = INCBIN_U32("graphics/summary_screen/page_info.bin.lz");
-#endif
-const u32 gSummaryPage_Skills_Tilemap[]       = INCBIN_U32("graphics/summary_screen/page_skills.bin.lz");
-const u32 gSummaryPage_BattleMoves_Tilemap[]  = INCBIN_U32("graphics/summary_screen/page_battle_moves.bin.lz");
-const u32 gSummaryPage_ContestMoves_Tilemap[] = INCBIN_U32("graphics/summary_screen/page_contest_moves.bin.lz");
-const u32 gSummaryPage_InfoEgg_Tilemap[]      = INCBIN_U32("graphics/summary_screen/page_info_egg.bin.lz");
 
 const u32 gBagMaleTiles[] = INCBIN_U32("graphics/bag/bag_male.4bpp.smol");
 const u32 gBagFemaleTiles[] = INCBIN_U32("graphics/bag/bag_female.4bpp.smol");
