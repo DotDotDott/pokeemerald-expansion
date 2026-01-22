@@ -1022,6 +1022,9 @@ Script_SimpleMsgScript::
 	release
 	end
 
+Talk:
+	emote_talking
+
 Text_SimpleMsgScript:
 	.string "Hi!\n"
 	.string "My name is Adam.\l"
@@ -1039,6 +1042,12 @@ script Columbus_NPC_Test {
     msgbox("A Statue of an Espeon.\n it looks cool.$")
     releaseall
 	openquestmenu
+}
+
+script Columbus_NPC_Test_two {
+	lockall	
+    msgboxEmote(0,Talk,"Hmmmmmmmmmmm.$")
+    releaseall
 }
 
 script Columbus_Trigger_BlockPath{

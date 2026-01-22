@@ -1,13 +1,14 @@
 mapscripts Columbus_PlayerHouse_F1_MapScripts {}
 
+
+
 script PlayersHouse_1F_Text_Mom_One {
 	lock
 	faceplayer
-	// setvar(VAR_0x8000, MUGSHOT_TEST)
-	// callnative(DrawMugsgot)
-	// msgbox("Mom: Hello sweeite\nHave a nice day.")
-	// callnative(ClearMugshot)
-	msgbox_mugshot("TEST!!!",MSGBOX_NPC,MUGSHOT_TEST)
+	setspeaker("Mom")
+	applymovement(1, moves(emote_thinking))
+	msgbox("Mom: Hello sweeite\nHave a nice day.")
+	applymovement(1, moves(emote_x))
 	release
 }
 
@@ -15,7 +16,9 @@ script PlayersHouse_1F_Text_Dad_One {
 	lockall
 	faceplayer
 	setspeaker("Dad")
+	applymovement(2, moves(emote_heart))
 	msgbox("Dad: Hey there kiddo.")
+	applymovement(2, moves(emote_exclamation_mark))
 	releaseall
 }
 

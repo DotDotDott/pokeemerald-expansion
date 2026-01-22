@@ -44,7 +44,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_EventScript_FatMan",
+      "script": "Columbus_NPC_Test_two",
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN"
     },
     {
@@ -186,8 +186,8 @@
       "x": 17,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_RUSTBORO_CITY_GYM",
+      "dest_warp_id": "0"
     },
     {
       "x": 7,

@@ -23,7 +23,7 @@ script EveryFrameTest {
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
+	applymovement(2, moves(emote_question_mark))
 	waitmovement(0)
 	msgbox("Sister: Let's go already")
 	closemessage

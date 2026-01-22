@@ -2047,66 +2047,86 @@ Script_SimpleMsgScript::
 # 1024 "data/maps/LittlerootTown/scripts.pory"
 
 # 1025 "data/maps/LittlerootTown/scripts.pory"
-Text_SimpleMsgScript:
+Talk:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
-	.string "Hi!\n"
+	emote_talking
 # 1027 "data/maps/LittlerootTown/scripts.pory"
-	.string "My name is Adam.\l"
+
 # 1028 "data/maps/LittlerootTown/scripts.pory"
-	.string "What's your name?\p"
+Text_SimpleMsgScript:
 # 1029 "data/maps/LittlerootTown/scripts.pory"
+	.string "Hi!\n"
+# 1030 "data/maps/LittlerootTown/scripts.pory"
+	.string "My name is Adam.\l"
+# 1031 "data/maps/LittlerootTown/scripts.pory"
+	.string "What's your name?\p"
+# 1032 "data/maps/LittlerootTown/scripts.pory"
 	.string "Nice to meet you, {PLAYER}!$"
 
 LittlerootTown_EventScript_NewSign::
-# 1032 "data/maps/LittlerootTown/scripts.pory"
+# 1035 "data/maps/LittlerootTown/scripts.pory"
 	lockall
-# 1033 "data/maps/LittlerootTown/scripts.pory"
+# 1036 "data/maps/LittlerootTown/scripts.pory"
 	msgbox LittlerootTown_EventScript_NewSign_Text_0
-# 1034 "data/maps/LittlerootTown/scripts.pory"
+# 1037 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
 Columbus_NPC_Test::
-# 1038 "data/maps/LittlerootTown/scripts.pory"
-	lockall
-# 1039 "data/maps/LittlerootTown/scripts.pory"
-	msgbox Columbus_NPC_Test_Text_0
-# 1040 "data/maps/LittlerootTown/scripts.pory"
-	releaseall
 # 1041 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1042 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Columbus_NPC_Test_Text_0
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+# 1044 "data/maps/LittlerootTown/scripts.pory"
 	openquestmenu
 	return
 
 
-Columbus_Trigger_BlockPath::
-# 1045 "data/maps/LittlerootTown/scripts.pory"
-	lockall
-# 1046 "data/maps/LittlerootTown/scripts.pory"
-	msgbox Columbus_Trigger_BlockPath_Text_0
-# 1047 "data/maps/LittlerootTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_BlockPath_Movement_0
+Columbus_NPC_Test_two::
 # 1048 "data/maps/LittlerootTown/scripts.pory"
-	waitmovement 0
+	lockall
 # 1049 "data/maps/LittlerootTown/scripts.pory"
+	msgboxEmote 0, Talk, Columbus_NPC_Test_two_Text_0
+# 1050 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
-# 1047 "data/maps/LittlerootTown/scripts.pory"
+Columbus_Trigger_BlockPath::
+# 1054 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1055 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Columbus_Trigger_BlockPath_Text_0
+# 1056 "data/maps/LittlerootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_BlockPath_Movement_0
+# 1057 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement 0
+# 1058 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+# 1056 "data/maps/LittlerootTown/scripts.pory"
 Columbus_Trigger_BlockPath_Movement_0:
-# 1047 "data/maps/LittlerootTown/scripts.pory"
+# 1056 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
 	step_end
 
 LittlerootTown_EventScript_NewSign_Text_0:
-# 1033 "data/maps/LittlerootTown/scripts.pory"
+# 1036 "data/maps/LittlerootTown/scripts.pory"
 	.string "Hello World$"
 
 Columbus_NPC_Test_Text_0:
-# 1039 "data/maps/LittlerootTown/scripts.pory"
+# 1042 "data/maps/LittlerootTown/scripts.pory"
 	.string "A Statue of an Espeon.\n it looks cool.$"
 
+Columbus_NPC_Test_two_Text_0:
+# 1049 "data/maps/LittlerootTown/scripts.pory"
+	.string "Hmmmmmmmmmmm.$"
+
 Columbus_Trigger_BlockPath_Text_0:
-# 1046 "data/maps/LittlerootTown/scripts.pory"
+# 1055 "data/maps/LittlerootTown/scripts.pory"
 	.string "I shouldn't go too far without\na Pokemon$"

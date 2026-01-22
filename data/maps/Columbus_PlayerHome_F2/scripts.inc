@@ -44,7 +44,7 @@ EveryFrameTest_2:
 # 25 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, EveryFrameTest_Movement_1
 # 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	applymovement sisIntro, EveryFrameTest_Movement_2
+	applymovement 2, EveryFrameTest_Movement_2
 # 27 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 	waitmovement 0
 # 28 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
@@ -186,7 +186,7 @@ PlayersHouse_2F_Annoyed_Sister::
 # 123 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 	waitmessage
 # 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	applymovement sisIntro, EveryFrameTest_Movement_2
+	applymovement sisIntro, PlayersHouse_2F_Annoyed_Sister_Movement_0
 # 125 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 	waitmovement 0
 # 126 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
@@ -224,7 +224,7 @@ OnTransition_1:
 # 143 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 	closemessage
 # 144 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	applymovement sisIntro, EveryFrameTest_Movement_2
+	applymovement sisIntro, PlayersHouse_2F_Annoyed_Sister_Movement_0
 # 145 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 	waitmovement 0
 # 146 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
@@ -261,27 +261,7 @@ EveryFrameTest_Movement_1:
 # 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 EveryFrameTest_Movement_2:
 # 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_up
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_up
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_up
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_up
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_up
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_up
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_up
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_left
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_left
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_left
-# 26 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
-	walk_left
+	emote_question_mark
 	step_end
 
 # 30 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
@@ -310,6 +290,32 @@ EveryFrameTest_Movement_3:
 	walk_down
 # 30 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
 	walk_right
+	step_end
+
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+PlayersHouse_2F_Annoyed_Sister_Movement_0:
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_up
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_up
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_up
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_up
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_up
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_up
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_up
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_left
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_left
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_left
+# 124 "data/maps/Columbus_PlayerHome_F2/scripts.pory"
+	walk_left
 	step_end
 
 EveryFrameTest_Text_0:
