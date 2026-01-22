@@ -213,7 +213,7 @@
 #define METATILE_General_Door                  0x021
 #define METATILE_General_Door_Contest          0x1DB
 #define METATILE_General_Door_Gym              0x1CD
-#define METATILE_General_Door_PokeCenter       0x079
+#define METATILE_General_Door_PokeCenter       0x061
 #define METATILE_General_Door_PokeMart         0x041
 #define METATILE_General_Grass                 0x001
 #define METATILE_General_Grass_TreeLeft        0x1CE
@@ -431,7 +431,11 @@
 #define METATILE_PokemonCenter_Floor_ShadowTop           0x21E
 #define METATILE_PokemonCenter_Floor_ShadowTop_Alt       0x2DC
 
+// gTileset_PorytilesPrimaryTest
+#define METATILE_PorytilesPrimaryTest_MyPokeCenterDoor  0x079
+
 // gTileset_PorytilesSecondaryTutorialTwo
+#define METATILE_PorytilesSecondaryTutorialTwo_Door_Libary      0x273
 #define METATILE_PorytilesSecondaryTutorialTwo_Door_Littleroot  0x229
 
 // gTileset_Rustboro
@@ -783,6 +787,7 @@
 #define METATILE_Underwater_RockWall     0x21E
 
 // Other
+#define METATILE_MyPrimary_MyPCDoor            0x079
 #define METATILE_RSMossdeepGym_RedArrow_Down   0x205
 #define METATILE_RSMossdeepGym_RedArrow_Left   0x20C
 #define METATILE_RSMossdeepGym_RedArrow_Right  0x204
