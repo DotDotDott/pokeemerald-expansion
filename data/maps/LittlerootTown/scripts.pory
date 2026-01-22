@@ -3,6 +3,7 @@ LittlerootTown_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_OnFrame
 	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_OnWarp
+	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD
 	.byte 0
 
 	@ State descriptions for VAR_LITTLEROOT_TOWN_STATE
@@ -48,6 +49,38 @@ LittlerootTown_OnTransition:
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 1, LittlerootTown_EventScript_HideMapNamePopup
 	call_if_eq VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 2, LittlerootTown_EventScript_LeftLabAfterDexUpgrade
 	end
+
+
+LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD:
+	setflag FLAG_TEMP_1
+	setflag FLAG_TEMP_2
+	setflag FLAG_TEMP_3
+	setflag FLAG_TEMP_4
+	random 4
+	switch VAR_RESULT
+	case 0, LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_2
+	case 1, LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_3
+	case 2, LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_4
+	case 3, LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_5
+	return
+
+LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_2:
+	clearflag FLAG_TEMP_1
+	return
+
+LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_3:
+	clearflag FLAG_TEMP_2
+	return
+
+LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_4:
+	clearflag FLAG_TEMP_4
+	return
+
+LittlerootTown_MyMapscripts_MAP_SCRIPT_ON_LOAD_5:
+	clearflag FLAG_TEMP_1
+	clearflag FLAG_TEMP_3
+	return
+	
 
 LittlerootTown_EventScript_LeftLabAfterDexUpgrade::
 	setvar VAR_DEX_UPGRADE_JOHTO_STARTER_STATE, 3
@@ -1031,6 +1064,8 @@ Text_SimpleMsgScript:
 	.string "What's your name?\p"
 	.string "Nice to meet you, {PLAYER}!$"
 `
+
+
 script LittlerootTown_EventScript_NewSign {
 	lockall	
     msgbox("Hello World")

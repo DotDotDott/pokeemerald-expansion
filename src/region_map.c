@@ -44,6 +44,7 @@
 #define MAPCURSOR_Y_MIN 2
 #define MAPCURSOR_X_MAX (MAPCURSOR_X_MIN + MAP_WIDTH - 1)
 #define MAPCURSOR_Y_MAX (MAPCURSOR_Y_MIN + MAP_HEIGHT - 1)
+#define MAP_SPRITE_16X16 200
 
 #define FLYDESTICON_RED_OUTLINE 6
 
@@ -74,7 +75,7 @@ static EWRAM_DATA struct {
     u16 state;
     mapsec_u16_t mapSecId;
     struct RegionMap regionMap;
-    u8 tileBuffer[0x1c0];
+    u8 tileBuffer[0x2c0];
     u8 nameBuffer[0x26]; // never read
     bool8 choseFlyLocation;
 } *sFlyMap = NULL;
@@ -475,6 +476,17 @@ static const union AnimCmd sFlyDestIcon_Anim_8x16CantFly[] =
     ANIMCMD_FRAME( 8, 5),
     ANIMCMD_END
 };
+static const union AnimCmd sFlyDestIcon_Anim_16x16CanFly[] =
+{
+	ANIMCMD_FRAME(14, 5),
+	ANIMCMD_END
+};
+
+static const union AnimCmd sFlyDestIcon_Anim_16x16CantFly[] =
+{
+	ANIMCMD_FRAME(18, 5),
+	ANIMCMD_END
+};
 
 // Only used by Battle Frontier
 static const union AnimCmd sFlyDestIcon_Anim_RedOutline[] =
@@ -485,13 +497,15 @@ static const union AnimCmd sFlyDestIcon_Anim_RedOutline[] =
 
 static const union AnimCmd *const sFlyDestIcon_Anims[] =
 {
-    [SPRITE_SHAPE(8x8)]       = sFlyDestIcon_Anim_8x8CanFly,
-    [SPRITE_SHAPE(16x8)]      = sFlyDestIcon_Anim_16x8CanFly,
-    [SPRITE_SHAPE(8x16)]      = sFlyDestIcon_Anim_8x16CanFly,
-    [SPRITE_SHAPE(8x8)  + 3]  = sFlyDestIcon_Anim_8x8CantFly,
-    [SPRITE_SHAPE(16x8) + 3]  = sFlyDestIcon_Anim_16x8CantFly,
-    [SPRITE_SHAPE(8x16) + 3]  = sFlyDestIcon_Anim_8x16CantFly,
-    [FLYDESTICON_RED_OUTLINE] = sFlyDestIcon_Anim_RedOutline
+	[SPRITE_SHAPE(8x8)] = sFlyDestIcon_Anim_8x8CanFly,
+	[SPRITE_SHAPE(16x8)] = sFlyDestIcon_Anim_16x8CanFly,
+	[SPRITE_SHAPE(8x16)] = sFlyDestIcon_Anim_8x16CanFly,
+	[SPRITE_SHAPE(8x8) + 3] = sFlyDestIcon_Anim_8x8CantFly,
+	[SPRITE_SHAPE(16x8) + 3] = sFlyDestIcon_Anim_16x8CantFly,
+	[SPRITE_SHAPE(8x16) + 3] = sFlyDestIcon_Anim_8x16CantFly,
+	[FLYDESTICON_RED_OUTLINE] = sFlyDestIcon_Anim_RedOutline,
+	[MAP_SPRITE_16X16] = sFlyDestIcon_Anim_16x16CanFly,
+	[MAP_SPRITE_16X16 + 3] = sFlyDestIcon_Anim_16x16CantFly,
 };
 
 static const struct SpriteTemplate sFlyDestIconSpriteTemplate =
@@ -1862,7 +1876,9 @@ static void CreateFlyDestIcons(void)
         x = (x + MAPCURSOR_X_MIN) * 8 + 4;
         y = (y + MAPCURSOR_Y_MIN) * 8 + 4;
 
-        if (width == 2)
+        if (width == 2 && height == 2)
+            shape = MAP_SPRITE_16X16;
+        else if (width == 2)
             shape = SPRITE_SHAPE(16x8);
         else if (height == 2)
             shape = SPRITE_SHAPE(8x16);
@@ -1872,6 +1888,9 @@ static void CreateFlyDestIcons(void)
         spriteId = CreateSprite(&sFlyDestIconSpriteTemplate, x, y, 10);
         if (spriteId != MAX_SPRITES)
         {
+            if (shape == MAP_SPRITE_16X16) {
+	            gSprites[spriteId].oam.size = SPRITE_SIZE(16x16);
+                }
             gSprites[spriteId].oam.shape = shape;
 
             if (FlagGet(canFlyFlag))
