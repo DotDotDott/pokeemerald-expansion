@@ -6444,6 +6444,7 @@ const u8 *GetTrainerPartnerName(void)
 
 #define sAnimId    data[2]
 #define sAnimDelay data[3]
+#define tIsShadow  data[4]
 
 static void Task_AnimateAfterDelay(u8 taskId)
 {
@@ -6459,6 +6460,11 @@ static void Task_PokemonSummaryAnimateAfterDelay(u8 taskId)
     if (--gTasks[taskId].sAnimDelay == 0)
     {
         StartMonSummaryAnimation(READ_PTR_FROM_TASK(taskId, 0), gTasks[taskId].sAnimId);
+    #if P_SUMMARY_SCREEN_MON_SHADOWS == TRUE
+        if (gTasks[taskId].tIsShadow)
+        SummaryScreen_SetShadowAnimDelayTaskId(TASK_NONE); // needed to track anim delay task for mon shadow in summary screen
+        else
+    #endif
         SummaryScreen_SetAnimDelayTaskId(TASK_NONE);
         DestroyTask(taskId);
     }
@@ -6519,7 +6525,7 @@ void DoMonFrontSpriteAnimation(struct Sprite *sprite, u16 species, bool8 noCry, 
     }
 }
 
-void PokemonSummaryDoMonAnimation(struct Sprite *sprite, u16 species, bool8 oneFrame)
+void PokemonSummaryDoMonAnimation(struct Sprite *sprite, u16 species, bool8 oneFrame, bool32 isShadow)
 {
     if (!oneFrame && HasTwoFramesAnimation(species))
         StartSpriteAnim(sprite, 1);
@@ -6530,7 +6536,13 @@ void PokemonSummaryDoMonAnimation(struct Sprite *sprite, u16 species, bool8 oneF
         STORE_PTR_IN_TASK(sprite, taskId, 0);
         gTasks[taskId].sAnimId = gSpeciesInfo[species].frontAnimId;
         gTasks[taskId].sAnimDelay = gSpeciesInfo[species].frontAnimDelay;
-        SummaryScreen_SetAnimDelayTaskId(taskId);
+        gTasks[taskId].tIsShadow = isShadow;  // needed to track anim delay task for mon shadow in summary screen
+    #if P_SUMMARY_SCREEN_MON_SHADOWS == TRUE
+        if(isShadow)
+            SummaryScreen_SetShadowAnimDelayTaskId(taskId);
+        else
+    #endif
+            SummaryScreen_SetAnimDelayTaskId(taskId);
         SetSpriteCB_MonAnimDummy(sprite);
     }
     else
