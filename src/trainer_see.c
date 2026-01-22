@@ -68,6 +68,8 @@ static const u8 sEmotion_DoubleExclamationMarkGfx[] = INCBIN_U8("graphics/field_
 static const u8 sEmotion_XGfx[] = INCBIN_U8("graphics/field_effects/pics/emote_x.4bpp");
 // HGSS emote graphics ripped by Lemon on The Spriters Resource: https://www.spriters-resource.com/ds_dsi/pokemonheartgoldsoulsilver/sheet/30497/
 static const u8 sEmotion_Gfx[] = INCBIN_U8("graphics/misc/emotes.4bpp");
+static const u8 sEmotion_TalkingGfx[] = INCBIN_U8("graphics/field_effects/pics/emotion_talking.4bpp");
+static const u8 sEmotion_ThinkingGfx[] = INCBIN_U8("graphics/field_effects/pics/emotion_thinking.4bpp");
 
 static u8 (*const sDirectionalApproachDistanceFuncs[])(struct ObjectEvent *trainerObj, s16 range, s16 x, s16 y) =
 {
@@ -150,6 +152,22 @@ static const struct SpriteFrameImage sSpriteImageTable_ExclamationQuestionMark[]
     {
         .data = sEmotion_XGfx,
         .size = sizeof(sEmotion_XGfx)
+    }
+};
+
+static const struct SpriteFrameImage sSpriteImageTable_TalkingIcon[] =
+{
+    {
+        .data = sEmotion_TalkingGfx,
+        .size = 0x80
+    }
+};
+
+static const struct SpriteFrameImage sSpriteImageTable_ThinkingIcon[] =
+{
+    {
+        .data = sEmotion_ThinkingGfx,
+        .size = 0x80
     }
 };
 
@@ -341,6 +359,27 @@ static const struct SpriteTemplate sSpriteTemplate_HeartIcon =
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_HeartIcon,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_TrainerIcons
+};
+static const struct SpriteTemplate sSpriteTemplate_TalkingIcon =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = TAG_NONE,
+    .oam = &sOamData_Icons,
+    .anims = sSpriteAnimTable_Icons,
+    .images = sSpriteImageTable_TalkingIcon,
+    .affineAnims = gDummySpriteAffineAnimTable,
+    .callback = SpriteCB_TrainerIcons
+};
+
+static const struct SpriteTemplate sSpriteTemplate_ThinkingIcon =
+{
+    .tileTag = TAG_NONE,
+    .paletteTag = TAG_NONE,
+    .oam = &sOamData_Icons,
+    .anims = sSpriteAnimTable_Icons,
+    .images = sSpriteImageTable_ThinkingIcon,
     .affineAnims = gDummySpriteAffineAnimTable,
     .callback = SpriteCB_TrainerIcons
 };
@@ -1000,6 +1039,25 @@ u8 FldEff_XIcon(void)
         SetIconSpriteData(sprite, FLDEFF_X_ICON, 3);
         UpdateSpritePaletteByTemplate(&sSpriteTemplate_ExclamationQuestionMark, sprite);
     }
+
+    return 0;
+}
+u8 FldEff_TalkingIcon(void)
+{
+    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_TalkingIcon, 0, 0, 0x52);
+
+    if (spriteId != MAX_SPRITES)
+        SetIconSpriteData(&gSprites[spriteId], FLDEFF_TALKING_ICON, 0);
+
+    return 0;
+}
+
+u8 FldEff_ThinkingIcon(void)
+{
+    u8 spriteId = CreateSpriteAtEnd(&sSpriteTemplate_ThinkingIcon, 0, 0, 0x52);
+
+    if (spriteId != MAX_SPRITES)
+        SetIconSpriteData(&gSprites[spriteId], FLDEFF_THINKING_ICON, 0);
 
     return 0;
 }
