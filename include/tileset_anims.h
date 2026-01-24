@@ -33,4 +33,8 @@ void InitTilesetAnim_MauvilleGameCorner(void);
 void InitTilesetAnim_BattleDome(void);
 void InitTilesetAnim_BattlePyramid(void);
 
+// Our custom tileset animations:
+
+void InitTilesetAnim_PorytilesPrimaryTutorial(void);
+
 #endif // GUARD_TILESET_ANIMS_H

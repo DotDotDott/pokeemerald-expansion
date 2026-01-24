@@ -386,6 +386,8 @@
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
 //========my stuff=======================
 #define OBJ_EVENT_PAL_PROF_TULIP                  0x1125
+#define OBJ_EVENT_PAL_TAG_MY_ROCK                  0x1126
+
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

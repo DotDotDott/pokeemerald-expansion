@@ -839,9 +839,10 @@ const struct Tileset gTileset_PorytilesPrimaryTest =
     .palettes = gTilesetPalettes_PorytilesPrimaryTest,
     .metatiles = gMetatiles_PorytilesPrimaryTest,
     .metatileAttributes = gMetatileAttributes_PorytilesPrimaryTest,
-    .callback = NULL,
+    .callback = InitTilesetAnim_PorytilesPrimaryTutorial,
 };
 
+//liar! deciver!
 const struct Tileset gTileset_PorytilesPimaryTutorial =
 {
     .isCompressed = TRUE,

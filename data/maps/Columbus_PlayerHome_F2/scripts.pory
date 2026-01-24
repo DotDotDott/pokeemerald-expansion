@@ -23,6 +23,7 @@ script EveryFrameTest {
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
+	//fix this plz mel
 	applymovement(2, moves(emote_question_mark))
 	waitmovement(0)
 	msgbox("Sister: Let's go already")

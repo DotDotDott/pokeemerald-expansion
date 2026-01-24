@@ -398,6 +398,9 @@ const u32 gObjectEventPic_ProfTulip[] = INCBIN_U32("graphics/object_events/pics/
 
 const u16 gObjectEventPalette_ProfTulip[] = INCBIN_U16("graphics/object_events/pics/people/z_prof_tulip.gbapal");
 
+//my rock palette for TM objects only ATM
+const u16 gObjectEventPalette_MyRocks[] = INCBIN_U16("graphics/object_events/palettes/myRocks.gbapal");
+
 //
 
 //====End of my Stuff====
