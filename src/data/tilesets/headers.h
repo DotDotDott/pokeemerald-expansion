@@ -930,3 +930,14 @@ const struct Tileset gTileset_InsideSPOne =
     .metatileAttributes = gMetatileAttributes_InsideSPOne,
     .callback = NULL,
 };
+
+const struct Tileset gTileset_porytiles_sec_MyPC =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_porytiles_sec_MyPC,
+    .palettes = gTilesetPalettes_porytiles_sec_MyPC,
+    .metatiles = gMetatiles_porytiles_sec_MyPC,
+    .metatileAttributes = gMetatileAttributes_porytiles_sec_MyPC,
+    .callback = NULL,
+};

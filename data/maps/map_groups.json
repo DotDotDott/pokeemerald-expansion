@@ -105,7 +105,8 @@
     "SproutTownHouse",
     "SproutPC_F1",
     "Columbus_PlayerHome_F2",
-    "Columbus_PlayerHouse_F1"
+    "Columbus_PlayerHouse_F1",
+    "SproutPC_F2"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

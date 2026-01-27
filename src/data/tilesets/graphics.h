@@ -1805,3 +1805,22 @@ const u16 gTilesetPalettes_InsideSPOne[][16] =
 };
 
 const u32 gTilesetTiles_InsideSPOne[] = INCBIN_U32("data/tilesets/secondary/inside_spone/tiles.4bpp.lz");
+
+const u16 gTilesetPalettes_porytiles_sec_MyPC[][16] =
+{
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/porytiles_sec_my_pc/palettes/12.gbapal"),
+};
+
+const u32 gTilesetTiles_porytiles_sec_MyPC[] = INCBIN_U32("data/tilesets/secondary/porytiles_sec_my_pc/tiles.4bpp.lz");

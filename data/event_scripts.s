@@ -1192,3 +1192,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/Columbus_PlayerHouse_F1/scripts.inc"
 	.include "data/scripts/battle_frontier.inc"
 	.include "data/scripts/apricorn_tree.inc"
+
+	.include "data/maps/SproutPC_F2/scripts.inc"

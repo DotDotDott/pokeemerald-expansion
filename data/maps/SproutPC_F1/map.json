@@ -16,11 +16,18 @@
   "object_events": [],
   "warp_events": [
     {
-      "x": 4,
-      "y": 9,
+      "x": 7,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN",
       "dest_warp_id": "5"
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "elevation": 0,
+      "dest_map": "MAP_SPROUT_PC_F1",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
