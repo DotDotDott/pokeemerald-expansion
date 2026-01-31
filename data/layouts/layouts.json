@@ -4484,8 +4484,8 @@
     {
       "id": "LAYOUT_SPROUT_PC_F2",
       "name": "SproutPC_F2_Layout",
-      "width": 20,
-      "height": 14,
+      "width": 12,
+      "height": 9,
       "primary_tileset": "gTileset_PorytilePrimaryBuilding",
       "secondary_tileset": "gTileset_porytiles_sec_MyPC",
       "border_filepath": "data/layouts/SproutPC_F2/border.bin",
