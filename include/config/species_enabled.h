@@ -73,7 +73,7 @@
 #define P_FAMILY_ZUBAT                   P_GEN_1_POKEMON
 #define P_FAMILY_ODDISH                  P_GEN_1_POKEMON
 #define P_FAMILY_PARAS                   FALSE
-#define P_FAMILY_VENONAT                 FALSE
+#define P_FAMILY_VENONAT                 P_GEN_1_POKEMON
 #define P_FAMILY_DIGLETT                 FALSE
 #define P_FAMILY_MEOWTH                  P_GEN_1_POKEMON
 #define P_FAMILY_PSYDUCK                 FALSE
@@ -190,7 +190,7 @@
 #define P_FAMILY_MUDKIP                  FALSE
 #define P_FAMILY_POOCHYENA               FALSE
 #define P_FAMILY_ZIGZAGOON               P_GEN_3_POKEMON
-#define P_FAMILY_WURMPLE                 P_GEN_3_POKEMON
+#define P_FAMILY_WURMPLE                 FALSE
 #define P_FAMILY_LOTAD                   P_GEN_3_POKEMON
 #define P_FAMILY_SEEDOT                  FALSE
 #define P_FAMILY_TAILLOW                 P_GEN_3_POKEMON
@@ -391,7 +391,7 @@
 #define P_FAMILY_FROAKIE                 FALSE
 #define P_FAMILY_BUNNELBY                P_GEN_6_POKEMON
 #define P_FAMILY_FLETCHLING              P_GEN_6_POKEMON
-#define P_FAMILY_SCATTERBUG              FALSE
+#define P_FAMILY_SCATTERBUG              P_GEN_6_POKEMON
 #define P_FAMILY_LITLEO                  FALSE
 #define P_FAMILY_FLABEBE                 FALSE
 #define P_FAMILY_SKIDDO                  FALSE

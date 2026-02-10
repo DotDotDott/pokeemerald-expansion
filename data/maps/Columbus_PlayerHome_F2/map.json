@@ -16,7 +16,7 @@
   "object_events": [
     {
       "local_id": "sisIntro",
-      "graphics_id": "OBJ_EVENT_GFX_GIRL_3",
+      "graphics_id": "OBJ_EVENT_GFX_VIKI",
       "x": 8,
       "y": 10,
       "elevation": 0,

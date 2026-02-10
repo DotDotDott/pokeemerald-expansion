@@ -527,6 +527,25 @@ static const struct SpritePalette sObjectEventSpritePalettes[] = {
     //My Stuff
     {gObjectEventPalette_ProfTulip, OBJ_EVENT_PAL_PROF_TULIP},
     {gObjectEventPalette_MyRocks, OBJ_EVENT_PAL_TAG_MY_ROCK},
+    {gObjectEventPalette_MyNurse, OBJ_EVENT_PAL_MY_NURSE},
+    {gObjectEventPalette_NurseBlk, OBJ_EVENT_PAL_TAG_NURSE_BLK},
+    {gObjectEventPal_Vikki, OBJ_EVENT_PAL_TAG_VIKI},
+    {gObjectEventPal_Mom, OBJ_EVENT_PAL_TAG_MOM},
+    {gObjectEventPal_Dad, OBJ_EVENT_PAL_TAG_DAD},
+    {gObjectEventPal_Tori, OBJ_EVENT_PAL_TAG_TORI},
+    {gObjectEventPal_Roxanne, OBJ_EVENT_PAL_TAG_ROXANNE},
+    {gObjectEventPal_Brawly, OBJ_EVENT_PAL_TAG_BRAWLY},
+    {gObjectEventPal_Wattson, OBJ_EVENT_PAL_TAG_WATTSON},
+    {gObjectEventPal_Norman, OBJ_EVENT_PAL_TAG_NORMAN},
+    {gObjectEventPal_Flannery, OBJ_EVENT_PAL_TAG_FLANNERY},
+    {gObjectEventPal_Winona, OBJ_EVENT_PAL_TAG_WINONA},
+    {gObjectEventPal_Tate, OBJ_EVENT_PAL_TAG_TATE},
+    {gObjectEventPal_Juan, OBJ_EVENT_PAL_TAG_JUAN},
+    {gObjectEventPal_Bug, OBJ_EVENT_PAL_TAG_BUG},
+    {gObjectEventPal_Sidney, OBJ_EVENT_PAL_TAG_SIDNEY},
+    {gObjectEventPal_Glacia, OBJ_EVENT_PAL_TAG_GLACIA},
+    {gObjectEventPal_Phoebe, OBJ_EVENT_PAL_TAG_PHOEBE},
+    {gObjectEventPal_Drake, OBJ_EVENT_PAL_TAG_DRAKE},
 
 
 #if OW_FOLLOWERS_POKEBALLS

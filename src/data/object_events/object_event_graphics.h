@@ -395,13 +395,66 @@ const u16 gObjectEventPaletteNeonLight[] = INCBIN_U16("graphics/object_events/pa
 //====Start of My stuff====
 //prof tulip's sprite
 const u32 gObjectEventPic_ProfTulip[] = INCBIN_U32("graphics/object_events/pics/people/z_prof_tulip.4bpp");
-
 const u16 gObjectEventPalette_ProfTulip[] = INCBIN_U16("graphics/object_events/pics/people/z_prof_tulip.gbapal");
 
 //my rock palette for TM objects only ATM
 const u16 gObjectEventPalette_MyRocks[] = INCBIN_U16("graphics/object_events/palettes/myRocks.gbapal");
 
-//
+const u16 gObjectEventPalette_MyNurse[] = INCBIN_U16("graphics/object_events/palettes/z_my_nurse.gbapal");
+
+//black nurse
+const u32 gObjectEventPic_NurseBlk[] = INCBIN_U32("graphics/object_events/pics/people/z_nurse_blk.4bpp");
+const u16 gObjectEventPalette_NurseBlk[] = INCBIN_U16("graphics/object_events/pics/people/z_nurse_blk.gbapal");
+
+//vikki
+const u32 gObjectEventPic_Vikki[] = INCBIN_U32("graphics/object_events/pics/people/z_viki.4bpp");
+const u16 gObjectEventPal_Vikki[] = INCBIN_U16("graphics/object_events/pics/people/z_viki.gbapal");
+
+//mom pal
+const u16 gObjectEventPal_Mom[] = INCBIN_U16("graphics/object_events/pics/people/mom.gbapal");
+
+//---------Gym leaders Pals-------
+//Parsley Pal
+const u16 gObjectEventPal_Roxanne[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/roxanne.gbapal");
+//Sage Pal
+const u16 gObjectEventPal_Brawly[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/brawly.gbapal");
+//Basil Pal
+const u16 gObjectEventPal_Wattson[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/wattson.gbapal");
+//Rosemary Pal
+const u16 gObjectEventPal_Norman[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/norman.gbapal");
+//Croi Pal
+const u16 gObjectEventPal_Flannery[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/flannery.gbapal");
+//Dil Pal
+const u16 gObjectEventPal_Winona[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/winona.gbapal");
+//Regeno Pal
+const u16 gObjectEventPal_Tate[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/tate.gbapal");
+//Thyme Pal
+const u16 gObjectEventPal_Juan[] = INCBIN_U16("graphics/object_events/pics/people/gym_leaders/juan.gbapal");
+
+//---------E4 Pals-------
+//Moss Pal
+const u16 gObjectEventPal_Sidney[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/sidney.gbapal");
+//Wort Pal
+const u16 gObjectEventPal_Glacia[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/glacia.gbapal");
+//Fern Pal
+const u16 gObjectEventPal_Phoebe[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/phoebe.gbapal");
+//Cyad Pal
+const u16 gObjectEventPal_Drake[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/drake.gbapal");
+
+
+//nico pal
+const u16 gObjectEventPal_Bug[] = INCBIN_U16("graphics/object_events/pics/people/bug_catcher.gbapal");
+
+//dad
+const u32 gObjectEventPic_Dad[] = INCBIN_U32("graphics/object_events/pics/people/z_dad.4bpp");
+const u16 gObjectEventPal_Dad[] = INCBIN_U16("graphics/object_events/pics/people/z_dad.gbapal");
+
+//troi
+const u32 gObjectEventPic_Tori[] = INCBIN_U32("graphics/object_events/pics/people/z_tori.4bpp");
+const u16 gObjectEventPal_Tori[] = INCBIN_U16("graphics/object_events/pics/people/z_tori.gbapal");
+
+
+
 
 //====End of my Stuff====
 
