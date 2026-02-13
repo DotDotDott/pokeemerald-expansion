@@ -365,7 +365,7 @@ static const struct SpriteTemplate sSpriteTemplate_HeartIcon =
 static const struct SpriteTemplate sSpriteTemplate_TalkingIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_MAY,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_TalkingIcon,
@@ -376,7 +376,7 @@ static const struct SpriteTemplate sSpriteTemplate_TalkingIcon =
 static const struct SpriteTemplate sSpriteTemplate_ThinkingIcon =
 {
     .tileTag = TAG_NONE,
-    .paletteTag = TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_MAY,
     .oam = &sOamData_Icons,
     .anims = sSpriteAnimTable_Icons,
     .images = sSpriteImageTable_ThinkingIcon,
