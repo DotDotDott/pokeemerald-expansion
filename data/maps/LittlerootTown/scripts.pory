@@ -1079,6 +1079,12 @@ script Columbus_NPC_Test {
 	openquestmenu
 }
 
+script Moss_Bit {
+	lockall	
+    msgbox("I'm a Cuck!$")
+    releaseall
+}
+
 script Columbus_NPC_Test_two {
 	lockall	
     msgboxEmote(0,Talk,"Hmmmmmmmmmmm.$")

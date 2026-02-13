@@ -35,7 +35,7 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TORI",
+      "graphics_id": "OBJ_EVENT_GFX_DEVON_EMPLOYEE",
       "x": 13,
       "y": 11,
       "elevation": 3,
@@ -48,7 +48,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ROXANNE",
+      "graphics_id": "OBJ_EVENT_GFX_MANIAC",
       "x": 17,
       "y": 11,
       "elevation": 3,
@@ -103,8 +103,8 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BIRCH"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_JUAN",
-      "x": 15,
+      "graphics_id": "OBJ_EVENT_GFX_MAGMA_MEMBER_F",
+      "x": 13,
       "y": 13,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
@@ -272,20 +272,20 @@
       "flag": "0"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_TATE",
-      "x": 16,
-      "y": 12,
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
+      "x": 15,
+      "y": 15,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 2,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_EventScript_FatMan",
+      "script": "Moss_Bit",
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BRAWLY",
+      "graphics_id": "OBJ_EVENT_GFX_EXPERT_M",
       "x": 18,
       "y": 12,
       "elevation": 3,
@@ -298,7 +298,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WATTSON",
+      "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
       "x": 19,
       "y": 11,
       "elevation": 3,
@@ -311,7 +311,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_NORMAN",
+      "graphics_id": "OBJ_EVENT_GFX_OLD_WOMAN",
       "x": 21,
       "y": 12,
       "elevation": 3,
@@ -324,7 +324,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_FLANNERY",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_4",
       "x": 21,
       "y": 10,
       "elevation": 3,
@@ -337,7 +337,7 @@
       "flag": "FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_WINONA",
+      "graphics_id": "OBJ_EVENT_GFX_MAN_1",
       "x": 23,
       "y": 12,
       "elevation": 3,

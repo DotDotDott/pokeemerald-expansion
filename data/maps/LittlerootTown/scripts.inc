@@ -2151,33 +2151,43 @@ Columbus_NPC_Test::
 	return
 
 
-Columbus_NPC_Test_two::
+Moss_Bit::
 # 1083 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1084 "data/maps/LittlerootTown/scripts.pory"
-	msgboxEmote 0, Talk, Columbus_NPC_Test_two_Text_0
+	msgbox Moss_Bit_Text_0
 # 1085 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
-Columbus_Trigger_BlockPath::
+Columbus_NPC_Test_two::
 # 1089 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1090 "data/maps/LittlerootTown/scripts.pory"
-	msgbox Columbus_Trigger_BlockPath_Text_0
+	msgboxEmote 0, Talk, Columbus_NPC_Test_two_Text_0
 # 1091 "data/maps/LittlerootTown/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_BlockPath_Movement_0
-# 1092 "data/maps/LittlerootTown/scripts.pory"
-	waitmovement 0
-# 1093 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
-# 1091 "data/maps/LittlerootTown/scripts.pory"
+Columbus_Trigger_BlockPath::
+# 1095 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1096 "data/maps/LittlerootTown/scripts.pory"
+	msgbox Columbus_Trigger_BlockPath_Text_0
+# 1097 "data/maps/LittlerootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_BlockPath_Movement_0
+# 1098 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement 0
+# 1099 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	return
+
+
+# 1097 "data/maps/LittlerootTown/scripts.pory"
 Columbus_Trigger_BlockPath_Movement_0:
-# 1091 "data/maps/LittlerootTown/scripts.pory"
+# 1097 "data/maps/LittlerootTown/scripts.pory"
 	walk_up
 	step_end
 
@@ -2189,10 +2199,14 @@ Columbus_NPC_Test_Text_0:
 # 1077 "data/maps/LittlerootTown/scripts.pory"
 	.string "A Statue of an Espeon.\n it looks cool.$"
 
-Columbus_NPC_Test_two_Text_0:
+Moss_Bit_Text_0:
 # 1084 "data/maps/LittlerootTown/scripts.pory"
+	.string "I'm a Cuck!$"
+
+Columbus_NPC_Test_two_Text_0:
+# 1090 "data/maps/LittlerootTown/scripts.pory"
 	.string "Hmmmmmmmmmmm.$"
 
 Columbus_Trigger_BlockPath_Text_0:
-# 1090 "data/maps/LittlerootTown/scripts.pory"
+# 1096 "data/maps/LittlerootTown/scripts.pory"
 	.string "I shouldn't go too far without\na Pokemon$"

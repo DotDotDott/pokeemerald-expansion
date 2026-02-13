@@ -73,7 +73,7 @@ const u32 gObjectEventPic_Girl1[] = INCBIN_U32("graphics/object_events/pics/peop
 const u32 gObjectEventPic_Boy2[] = INCBIN_U32("graphics/object_events/pics/people/boy_2.4bpp");
 const u32 gObjectEventPic_Girl2[] = INCBIN_U32("graphics/object_events/pics/people/girl_2.4bpp");
 const u32 gObjectEventPic_LittleBoy[] = INCBIN_U32("graphics/object_events/pics/people/little_boy.4bpp");
-const u32 gObjectEventPic_LittleGirl[] = INCBIN_U32("graphics/object_events/pics/people/little_girl.4bpp");
+const u32 gObjectEventPic_LittleGirl[] = INCBIN_U32("graphics/object_events/pics/people/little_girl_blk.4bpp");
 const u32 gObjectEventPic_Boy3[] = INCBIN_U32("graphics/object_events/pics/people/boy_3.4bpp");
 const u32 gObjectEventPic_Girl3[] = INCBIN_U32("graphics/object_events/pics/people/girl_3.4bpp");
 const u32 gObjectEventPic_RichBoy[] = INCBIN_U32("graphics/object_events/pics/people/rich_boy.4bpp");
@@ -440,6 +440,8 @@ const u16 gObjectEventPal_Glacia[] = INCBIN_U16("graphics/object_events/pics/peo
 const u16 gObjectEventPal_Phoebe[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/phoebe.gbapal");
 //Cyad Pal
 const u16 gObjectEventPal_Drake[] = INCBIN_U16("graphics/object_events/pics/people/elite_four/drake.gbapal");
+//Botan Pal
+const u16 gObjectEventPal_Steven[] = INCBIN_U16("graphics/object_events/pics/people/steven.gbapal");
 
 
 //nico pal
@@ -453,7 +455,130 @@ const u16 gObjectEventPal_Dad[] = INCBIN_U16("graphics/object_events/pics/people
 const u32 gObjectEventPic_Tori[] = INCBIN_U32("graphics/object_events/pics/people/z_tori.4bpp");
 const u16 gObjectEventPal_Tori[] = INCBIN_U16("graphics/object_events/pics/people/z_tori.gbapal");
 
+//---------Multi Use Pals-------
+const u16 gObjectEventPal_Admins[] = INCBIN_U16("graphics/object_events/palettes/my_pals/admins_pal.gbapal");
+const u16 gObjectEventPal_Boss[] = INCBIN_U16("graphics/object_events/palettes/my_pals/boss_pal.gbapal");
+const u16 gObjectEventPal_Grunt[] = INCBIN_U16("graphics/object_events/palettes/my_pals/grunt_pal.gbapal");
+const u16 gObjectEventPal_Light_Brown[] = INCBIN_U16("graphics/object_events/palettes/my_pals/light_brown.gbapal");
+const u16 gObjectEventPal_Nerd[] = INCBIN_U16("graphics/object_events/palettes/my_pals/nerd_pal.gbapal");
+const u16 gObjectEventPal_Other_Grunts[] = INCBIN_U16("graphics/object_events/palettes/my_pals/other_grunts.gbapal");
+const u16 gObjectEventPal_Purple[] = INCBIN_U16("graphics/object_events/palettes/my_pals/purple_pal.gbapal");
+const u16 gObjectEventPal_Red_Black[] = INCBIN_U16("graphics/object_events/palettes/my_pals/red_black_pal.gbapal");
+const u16 gObjectEventPal_Red_Blue[] = INCBIN_U16("graphics/object_events/palettes/my_pals/red_blue_pal.gbapal");
+//round2
+const u16 gObjectEventPal_Old_People[] = INCBIN_U16("graphics/object_events/palettes/my_pals/old_white_pal.gbapal");
+const u16 gObjectEventPal_Theif[] = INCBIN_U16("graphics/object_events/palettes/my_pals/theif_pal.gbapal");
+const u16 gObjectEventPal_Baller[] = INCBIN_U16("graphics/object_events/palettes/my_pals/baller_pal.gbapal");
+const u16 gObjectEventPal_Farmer[] = INCBIN_U16("graphics/object_events/palettes/my_pals/farmer_pal.gbapal");
+const u16 gObjectEventPal_Medical[] = INCBIN_U16("graphics/object_events/palettes/my_pals/medical_pal.gbapal");
+const u16 gObjectEventPal_Pokefan_M[] = INCBIN_U16("graphics/object_events/palettes/my_pals/pokefan_m_pal.gbapal");
+const u16 gObjectEventPal_Green[] = INCBIN_U16("graphics/object_events/palettes/my_pals/green_pal.gbapal");
+const u16 gObjectEventPal_Blue[] = INCBIN_U16("graphics/object_events/palettes/my_pals/blue_pal.gbapal");
+const u16 gObjectEventPal_Black_Lass[] = INCBIN_U16("graphics/object_events/palettes/my_pals/black_lass_pal.gbapal");
+const u16 gObjectEventPal_Old_Blk[] = INCBIN_U16("graphics/object_events/palettes/my_pals/old_blk_pal.gbapal");
 
+
+//---------Generic Sprites-------
+const u32 gObjectEventPic_Ace_F[] = INCBIN_U32("graphics/object_events/pics/people/classes/ace_f.4bpp");
+const u32 gObjectEventPic_Ace_M[] = INCBIN_U32("graphics/object_events/pics/people/classes/ace_m.4bpp");
+const u32 gObjectEventPic_Big_Guy[] = INCBIN_U32("graphics/object_events/pics/people/classes/big_guy.4bpp");
+const u32 gObjectEventPic_Bird_Keeper[] = INCBIN_U32("graphics/object_events/pics/people/classes/bird_keeper.4bpp");
+const u32 gObjectEventPic_Blue_Admin[] = INCBIN_U32("graphics/object_events/pics/people/classes/blue_admin.4bpp");
+const u32 gObjectEventPic_Chef_m[] = INCBIN_U32("graphics/object_events/pics/people/classes/chef_m.4bpp");
+const u32 gObjectEventPic_Cool_Girl[] = INCBIN_U32("graphics/object_events/pics/people/classes/cool_girl.4bpp");
+const u32 gObjectEventPic_Cool_Girl_Blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/cool_girl_blk.4bpp");
+const u32 gObjectEventPic_Lady[] = INCBIN_U32("graphics/object_events/pics/people/classes/lady.4bpp");
+const u32 gObjectEventPic_My_Lass[] = INCBIN_U32("graphics/object_events/pics/people/classes/lass.4bpp");
+const u32 gObjectEventPic_Little_Girl[] = INCBIN_U32("graphics/object_events/pics/people/classes/little_girl.4bpp");
+const u32 gObjectEventPic_NPC_Beauty[] = INCBIN_U32("graphics/object_events/pics/people/classes/npc_beauty.4bpp");
+const u32 gObjectEventPic_NPC_Woman_One[] = INCBIN_U32("graphics/object_events/pics/people/classes/npc_woman_1.4bpp");
+const u32 gObjectEventPic_Oeange_Admin[] = INCBIN_U32("graphics/object_events/pics/people/classes/orange_admin.4bpp");
+const u32 gObjectEventPic_Other_Grunt_f[] = INCBIN_U32("graphics/object_events/pics/people/classes/other_grunt_f.4bpp");
+const u32 gObjectEventPic_Other_Grunt_m[] = INCBIN_U32("graphics/object_events/pics/people/classes/other_grunt_m.4bpp");
+const u32 gObjectEventPic_Pure_Boss[] = INCBIN_U32("graphics/object_events/pics/people/classes/pure_boss.4bpp");
+const u32 gObjectEventPic_Pure_Grunt[] = INCBIN_U32("graphics/object_events/pics/people/classes/pure_grunt.4bpp");
+const u32 gObjectEventPic_Pure_Grunt_f[] = INCBIN_U32("graphics/object_events/pics/people/classes/pure_grunt_f.4bpp");
+const u32 gObjectEventPic_Scientist_f[] = INCBIN_U32("graphics/object_events/pics/people/classes/scientist_f.4bpp");
+const u32 gObjectEventPic_Scientist_m[] = INCBIN_U32("graphics/object_events/pics/people/classes/scientist_m.4bpp");
+const u32 gObjectEventPic_Scout_F[] = INCBIN_U32("graphics/object_events/pics/people/classes/scout_f.4bpp");
+const u32 gObjectEventPic_Scout_M[] = INCBIN_U32("graphics/object_events/pics/people/classes/scout_m.4bpp");
+const u32 gObjectEventPic_Super_Nerd[] = INCBIN_U32("graphics/object_events/pics/people/classes/super_nerd.4bpp");
+const u32 gObjectEventPic_Yellow_Admin[] = INCBIN_U32("graphics/object_events/pics/people/classes/yellow_admin.4bpp");
+const u32 gObjectEventPic_My_Youngster[] = INCBIN_U32("graphics/object_events/pics/people/classes/youngster.4bpp");
+//round 2
+const u32 gObjectEventPic_Scientist_m_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/scientist_m_blk.4bpp");
+const u32 gObjectEventPic_Worker[] = INCBIN_U32("graphics/object_events/pics/people/classes/worker.4bpp");
+const u32 gObjectEventPic_Worker_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/worker_blk.4bpp");
+const u32 gObjectEventPic_Theif[] = INCBIN_U32("graphics/object_events/pics/people/classes/theif.4bpp");
+const u32 gObjectEventPic_Theif_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/theif_blk.4bpp");
+const u32 gObjectEventPic_Rude_Guy[] = INCBIN_U32("graphics/object_events/pics/people/classes/rude_guy.4bpp");
+const u32 gObjectEventPic_Baller[] = INCBIN_U32("graphics/object_events/pics/people/classes/baller.4bpp");
+const u32 gObjectEventPic_Baller_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/baller_blk.4bpp");
+const u32 gObjectEventPic_Farmer_f[] = INCBIN_U32("graphics/object_events/pics/people/classes/farmer_f.4bpp");
+const u32 gObjectEventPic_Farmer_m[] = INCBIN_U32("graphics/object_events/pics/people/classes/farmer_m.4bpp");
+const u32 gObjectEventPic_Doctor[] = INCBIN_U32("graphics/object_events/pics/people/classes/doctor.4bpp");
+const u32 gObjectEventPic_Doctor_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/doctor_blk.4bpp");
+const u32 gObjectEventPic_Doctor_f[] = INCBIN_U32("graphics/object_events/pics/people/classes/nurse.4bpp");
+const u32 gObjectEventPic_Doctor_f_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/nurse_blk.4bpp");
+const u32 gObjectEventPic_Pokefan_m_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/pokefan_m_blk.4bpp");
+const u32 gObjectEventPic_Scientist_f_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/scientist_f_blk.4bpp");
+const u32 gObjectEventPic_Cop[] = INCBIN_U32("graphics/object_events/pics/people/classes/cop.4bpp");
+const u32 gObjectEventPic_SchoolKidM_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/school_boy_blk.4bpp");
+const u32 gObjectEventPic_Gentleman_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/old_blk_man.4bpp");
+const u32 gObjectEventPic_Mademe[] = INCBIN_U32("graphics/object_events/pics/people/classes/old_woman.4bpp");
+const u32 gObjectEventPic_Mademe_blk[] = INCBIN_U32("graphics/object_events/pics/people/classes/old_blk_woman.4bpp");
+
+//unique pal
+const u16 gObjectEventPal_Scientist_m_blk[] = INCBIN_U16("graphics/object_events/pics/people/classes/scientist_m_blk.gbapal");
+const u16 gObjectEventPal_Worker[] = INCBIN_U16("graphics/object_events/pics/people/classes/worker.gbapal");
+const u16 gObjectEventPal_Worker_blk[] = INCBIN_U16("graphics/object_events/pics/people/classes/worker_blk.gbapal");
+const u16 gObjectEventPal_Rude_Guy[] = INCBIN_U16("graphics/object_events/pics/people/classes/rude_guy.gbapal");
+const u16 gObjectEventPal_Cop[] = INCBIN_U16("graphics/object_events/pics/people/classes/cop.gbapal");
+const u16 gObjectEventPal_Scientist_f_blk[] = INCBIN_U16("graphics/object_events/pics/people/classes/scientist_f_blk.gbapal");
+
+const u16 gObjectEventPal_Hex_Maniac[] = INCBIN_U16("graphics/object_events/pics/people/hex_maniac.gbapal");
+const u16 gObjectEventPal_Pokefan_F[] = INCBIN_U16("graphics/object_events/pics/people/pokefan_f.gbapal");
+const u16 gObjectEventPal_Twin[] = INCBIN_U16("graphics/object_events/pics/people/twin.gbapal");
+
+const u16 gObjectEventPal_Biker[] = INCBIN_U16("graphics/object_events/pics/people/cycling_triathlete_f.gbapal");
+const u16 gObjectEventPal_Youngster_Blk[] = INCBIN_U16("graphics/object_events/pics/people/youngster.gbapal");
+const u16 gObjectEventPal_NPC_Woman_Two[] = INCBIN_U16("graphics/object_events/pics/people/woman_2.gbapal");
+const u16 gObjectEventPal_Artist_M[] = INCBIN_U16("graphics/object_events/pics/people/man_1.gbapal");
+const u16 gObjectEventPal_Artist_F[] = INCBIN_U16("graphics/object_events/pics/people/artist.gbapal");
+const u16 gObjectEventPal_Sales_Woman[] = INCBIN_U16("graphics/object_events/pics/people/rooftop_sale_woman.gbapal");
+const u16 gObjectEventPal_Mart_Employee[] = INCBIN_U16("graphics/object_events/pics/people/mart_employee.gbapal");
+
+const u16 gObjectEventPal_Gym_Guy[] = INCBIN_U16("graphics/object_events/pics/people/scott.gbapal");
+const u16 gObjectEventPal_Old_Woman[] = INCBIN_U16("graphics/object_events/pics/people/expert_f.gbapal");
+const u16 gObjectEventPal_Old_Man[] = INCBIN_U16("graphics/object_events/pics/people/expert_m.gbapal");
+const u16 gObjectEventPal_Man_3[] = INCBIN_U16("graphics/object_events/pics/people/man_3.gbapal");
+const u16 gObjectEventPal_Woman_1[] = INCBIN_U16("graphics/object_events/pics/people/woman_1.gbapal");
+const u16 gObjectEventPal_Old_Woman_Blk[] = INCBIN_U16("graphics/object_events/pics/people/old_woman.gbapal");
+const u16 gObjectEventPal_RS_Little_Boy[] = INCBIN_U16("graphics/object_events/pics/people/rs_little_boy.gbapal");
+const u16 gObjectEventPal_Man_5[] = INCBIN_U16("graphics/object_events/pics/people/man_5.gbapal");
+const u16 gObjectEventPal_Beauty[] = INCBIN_U16("graphics/object_events/pics/people/beauty.gbapal");
+const u16 gObjectEventPal_Man_4[] = INCBIN_U16("graphics/object_events/pics/people/man_4.gbapal");
+const u16 gObjectEventPal_Fat_Man[] = INCBIN_U16("graphics/object_events/pics/people/fat_man.gbapal");
+const u16 gObjectEventPal_GameBoy_Kid[] = INCBIN_U16("graphics/object_events/pics/people/gameboy_kid.gbapal");
+const u16 gObjectEventPal_Sailor[] = INCBIN_U16("graphics/object_events/pics/people/sailor.gbapal");
+const u16 gObjectEventPal_Girl_One[] = INCBIN_U16("graphics/object_events/pics/people/girl_1.gbapal");
+const u16 gObjectEventPal_Boy_One[] = INCBIN_U16("graphics/object_events/pics/people/boy_1.gbapal");
+const u16 gObjectEventPal_Link_Rep[] = INCBIN_U16("graphics/object_events/pics/people/link_receptionist.gbapal");
+const u16 gObjectEventPal_Sci_Two[] = INCBIN_U16("graphics/object_events/pics/people/scientist_2.gbapal");
+const u16 gObjectEventPal_Woman_4[] = INCBIN_U16("graphics/object_events/pics/people/woman_4.gbapal");
+const u16 gObjectEventPal_Woman_5[] = INCBIN_U16("graphics/object_events/pics/people/woman_5.gbapal");
+const u16 gObjectEventPal_Girl_3[] = INCBIN_U16("graphics/object_events/pics/people/girl_3.gbapal");
+const u16 gObjectEventPal_Girl_2[] = INCBIN_U16("graphics/object_events/pics/people/girl_2.gbapal");
+const u16 gObjectEventPal_Woman_3[] = INCBIN_U16("graphics/object_events/pics/people/woman_3.gbapal");
+const u16 gObjectEventPal_Woman_2[] = INCBIN_U16("graphics/object_events/pics/people/woman_2.gbapal");
+
+const u16 gObjectEventPal_Devon[] = INCBIN_U16("graphics/object_events/pics/people/devon_employee.gbapal");
+const u16 gObjectEventPal_Man_2[] = INCBIN_U16("graphics/object_events/pics/people/man_2.gbapal");
+const u16 gObjectEventPal_Wallace[] = INCBIN_U16("graphics/object_events/pics/people/wallace.gbapal");
+const u16 gObjectEventPal_Wally[] = INCBIN_U16("graphics/object_events/pics/people/wally.gbapal");
+const u16 gObjectEventPal_Maniac[] = INCBIN_U16("graphics/object_events/pics/people/maniac.gbapal");
+const u16 gObjectEventPal_MagOne[] = INCBIN_U16("graphics/object_events/pics/people/team_magma/magma_member_m.gbapal");
+const u16 gObjectEventPal_MagTwo[] = INCBIN_U16("graphics/object_events/pics/people/team_magma/magma_member_f.gbapal");
 
 
 //====End of my Stuff====
