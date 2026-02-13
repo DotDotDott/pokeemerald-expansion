@@ -580,6 +580,10 @@ const u16 gObjectEventPal_Maniac[] = INCBIN_U16("graphics/object_events/pics/peo
 const u16 gObjectEventPal_MagOne[] = INCBIN_U16("graphics/object_events/pics/people/team_magma/magma_member_m.gbapal");
 const u16 gObjectEventPal_MagTwo[] = INCBIN_U16("graphics/object_events/pics/people/team_magma/magma_member_f.gbapal");
 
+//statue
+const u32 gObjectEventPic_My_Statue[] = INCBIN_U32("graphics/object_events/pics/misc/statue_build.4bpp");
+const u16 gObjectEventPal_My_Statue[] = INCBIN_U16("graphics/object_events/pics/misc/statue_build.gbapal");
+
 
 //====End of my Stuff====
 

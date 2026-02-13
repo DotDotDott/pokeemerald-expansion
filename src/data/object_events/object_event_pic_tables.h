@@ -913,7 +913,18 @@ const struct SpriteFrameImage gObjectEventPicTable_Mademe_blk[] = {
     overworld_frame(gObjectEventPic_Mademe_blk, 2, 4, 8),
 };
 
-
+//my statue
+static const struct SpriteFrameImage ObjectEventPicTable_My_Statue[] = {
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 0),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 1),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 2),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 3),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 4),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 5),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 0),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 0),
+    overworld_frame(gObjectEventPic_My_Statue, 4, 4, 0),
+};
 
 
 //end My Stuff==

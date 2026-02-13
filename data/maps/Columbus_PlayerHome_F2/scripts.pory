@@ -19,14 +19,16 @@ script EveryFrameTest {
 	lockall
 	setmetatile(2,2,0,26)
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-	msgbox(fromat("Sister: Hey you little brat."))
+	setspeaker("Viki")
+	msgbox(fromat("Hey you little brat."))
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
 	//fix this plz mel
 	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
 	waitmovement(0)
-	msgbox("Sister: Let's go already")
+	setspeaker("Viki")
+	msgbox("Let's go already")
 	closemessage
 	applymovement(sisIntro, moves( walk_right * 4, walk_down * 7,walk_right))
 	waitmovement(0)

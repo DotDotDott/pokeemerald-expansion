@@ -298,6 +298,8 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Gentleman_b
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Madame_blk;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Madame;
 
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_My_Statue;
+
 
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bard;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Hipster;
@@ -606,6 +608,8 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
     [OBJ_EVENT_GFX_GENTLEMAN_BLK] =                     &gObjectEventGraphicsInfo_Gentleman_blk,
     [OBJ_EVENT_GFX_MADAME_BLK] =                     &gObjectEventGraphicsInfo_Madame_blk,
     [OBJ_EVENT_GFX_MADAME] =                     &gObjectEventGraphicsInfo_Madame,
+
+    [OBJ_EVENT_GFX_MY_STATUE] =                     &gObjectEventGraphicsInfo_My_Statue,
     
 
 };

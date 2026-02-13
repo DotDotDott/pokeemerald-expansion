@@ -6,22 +6,14 @@ script PlayersHouse_1F_Text_Mom_One {
 	lock
 	faceplayer
 	setspeaker("Mom")
-	applymovement(1, moves(emote_question_mark))
-	msgbox("Mom: Hello sweeite\nHave a nice day.")
-	applymovement(1, moves(emote_x))
-	msgbox("Mom: Hello sweeite\nHave a nice day.2")
-	applymovement(1, moves(emote_double_exclamation_mark))
-	msgbox("Mom: Hello sweeite\nHave a nice day.3")
+	msgbox(format("Hello sweetie, have a nice day."), MSGBOX_DEFAULT)
 	release
 }
 
 script PlayersHouse_1F_Text_Dad_One {
-	lockall
+	lock
 	faceplayer
 	setspeaker("Dad")
-	applymovement(2, moves(emote_heart))
-	msgbox("Dad: Hey there kiddo.")
-	applymovement(2, moves(emote_exclamation_mark))
 	msgbox("Dad: Hey there kiddo.")
 	releaseall
 }
