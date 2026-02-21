@@ -1486,3 +1486,8 @@ const u8 gText_Rename[] = _("RENAME");
 const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
 const u8 gText_CannotSendMonToBoxActive[] = _("Cannot send an active battler\nto the box.{PAUSE_UNTIL_PRESS}");
 const u8 gText_CannotSendMonToBoxPartner[] = _("Cannot send a mon that doesn't,\nbelong to you to the box.{PAUSE_UNTIL_PRESS}");
+
+//my stuff
+const u8 gText_Test_Good[] = _("I'm Good");
+const u8 gText_Test_Ok[] = _("I'm Ok");
+const u8 gText_Test_Bad[] = _("I'm Bad");

@@ -18,13 +18,14 @@ script EveryFrameTest {
 	{
 	lockall
 	setmetatile(2,2,0,26)
+	setflag(FLAG_RECEIVED_RUNNING_SHOES)
+	setflag(FLAG_SYS_B_DASH)
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
 	setspeaker("Viki")
 	msgbox(fromat("Hey you little brat."))
 	waitmessage
 	closemessage
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-	//fix this plz mel
 	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
 	waitmovement(0)
 	setspeaker("Viki")
@@ -69,13 +70,13 @@ script PlayersHouse_2F_Text_Apple_Pic {
 
 script PlayersHouse_2F_Text_Plant_One {
 	lockall
-	msgbox(format("The trash can is empty"))
+	msgbox(format("The trash can is empty/"))
 	releaseall
 }
 
 script PlayersHouse_2F_Text_Plant_Two {
 	lockall
-	msgbox(format("The trash can is empty aswell"))
+	msgbox(format("The trash can is empty as well/"))
 	releaseall
 }
 
@@ -87,33 +88,33 @@ script PlayersHouse_2F_Text_Player_Bed {
 
 script PlayersHouse_2F_Text_Sis_PC {
 	lockall
-	msgbox(format("It's your sister's PC.\p
+	msgbox("It's your sister's PC.\p
 	Probably shouldn't go snooping\n
-	around on here...\p again..."))
+	around on here...\p again...")
 	releaseall
 }
 
 script PlayersHouse_2F_Text_Sis_Bookshelf_One {
 	lockall
-	msgbox(format("It's one of your sister's bookshelves.\p
+	msgbox("It's one of your sister's bookshelves.\p
 	There seems to be a lot of large comics\n
-	featuring two men falling in love."))
+	featuring two men falling in love.")
 	releaseall
 }
 
 script PlayersHouse_2F_Text_Sis_Bookshelf_Two {
 	lockall
-	msgbox(format("It's one of your sister's bookshelves.\pThere seems to be a lot of large comics\n featuring two women falling in love.\p
+	msgbox("It's one of your sister's bookshelves.\pThere seems to be a lot of large comics\n featuring two women falling in love.\p
 	Especially a green one that seems to\n
-	be well read."))
+	be well read.")
 	releaseall
 }
 
 script PlayersHouse_2F_Text_Player_Sis_Bed {
 	lockall
-	msgbox(format("It's your sister's bed.\p
+	msgbox("It's your sister's bed.\p
 	It looks like she's been struggling\n
-	to sleep well recently."))
+	to sleep well recently.")
 	releaseall
 }
 

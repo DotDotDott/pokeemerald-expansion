@@ -2,25 +2,53 @@ mapscripts Columbus_PlayerHouse_F1_MapScripts {}
 
 
 
-script PlayersHouse_1F_Text_Mom_One {
+
+script PlayersHouse_1F_Text_Mom_Text_Real {
 	lock
 	faceplayer
-	setspeaker("Mom")
-	msgbox(format("Hello sweetie, have a nice day."), MSGBOX_DEFAULT)
+	if(var(VAR_COLUMBUS_INTRO_STATE) == 1)
+	{
+	setspeaker(SP_NAME_MOM)
+	msgbox(format("Hi sweetie, have fun at the library today, and make sure to stay close to your sister ok? Also um, I know you two can get on each other's nerves a bit but can you please go a little easy on her today? I'm not sure exactly what happened but I think her and Terry got in a bit of a fight."), MSGBOX_NPC)
+	applymovement(Mom, moves(face_original_direction))
 	release
+	}
+	else {
+		msgbox(format("Hi sweetie."), MSGBOX_NPC)
+
+	}
+
+
 }
 
-script PlayersHouse_1F_Text_Dad_One {
+script PlayersHouse_1F_Text_Dad_Text_Real {
 	lock
 	faceplayer
-	setspeaker("Dad")
-	msgbox("Dad: Hey there kiddo.")
-	releaseall
+	if(var(VAR_COLUMBUS_INTRO_STATE) == 1)
+	{
+	setspeaker(SP_NAME_MOM)
+	msgbox(format("Hey kiddo, shouldn't you be on your way to the library by now? That lecture thing should be starting soon right?"), MSGBOX_NPC)
+	applymovement(Mom, moves(face_original_direction))
+	release
+	}
+	else {
+		msgbox(format("Hey kiddo."), MSGBOX_NPC)
+
+	}
+
+
 }
+
 
 script PlayersHouse_1F_Text_Parents_Bed {
 	lockall
 	msgbox("It's your parents bed...")
+	releaseall
+}
+
+script PlayersHouse_1F_Text_Bookshelf {
+	lockall
+	msgbox(format("It's your parents bookshelf. There's a bunch of books about art theroy."))
 	releaseall
 }
 
@@ -36,14 +64,73 @@ script PlayersHouse_1F_Text_Plant_Three {
 	releaseall
 }
 
-script PlayersHouse_1F_Text_Plant_Four {
-	lockall
-	msgbox("Hey it's me mr. plant!\pDid you know that potted plants\ncan talk!\pOnly to you though, isn't that wild!?")
-	releaseall
-}
-
 script PlayersHouse_1F_Text_Plant_Five {
 	lockall
 	msgbox("Hey kid... you don't wanna know\nthe things ive seen in here...")
+	releaseall
+}
+
+
+
+
+
+
+//Some Test Stuff with the Parents
+script PlayersHouse_1F_Text_Mom_One {
+	lock
+	faceplayer
+	setspeaker(SP_NAME_MOM)
+	//Test Multi Choice Message
+	message(format("Hello sweetie, How are you doing?"))
+	waitmessage
+	multichoice(25,5, MULTI_TEST ,1)
+	closemessage
+	if(var(VAR_RESULT) == 0){
+		setspeaker(SP_NAME_MOM)
+		msgbox(format("Thats good to hear"), MSGBOX_NPC)
+	}
+	elif(var(VAR_RESULT) == 1){
+		setspeaker(SP_NAME_MOM)
+		msgbox(format("Thats Ok to hear"), MSGBOX_NPC)
+	}
+	elif(var(VAR_RESULT) == 2){
+		setspeaker(SP_NAME_MOM)
+		msgbox(format("I'm sorry sweetie"), MSGBOX_NPC)
+	}
+
+	//Test changing text based on state
+	if(var(VAR_COLUMBUS_INTRO_STATE) > 0)
+	{
+		switch (var(VAR_COLUMBUS_INTRO_STATE)){
+			case 1:
+				msgbox(format("Var 1 test! Whatever that means"), MSGBOX_NPC)
+			case 2:
+				msgbox(format("Var 2 test! Whatever that means"), MSGBOX_NPC)
+			default:
+				msgbox("Error.")
+		}
+	}
+
+	applymovement(Mom, moves(face_original_direction))
+
+	release
+}
+
+script PlayersHouse_1F_Text_Dad_One {
+	lock
+	faceplayer
+	setspeaker("Dad")
+	//Testing changing text and state
+	if(var(VAR_COLUMBUS_INTRO_STATE) != 2)
+	{
+	msgbox(format("Hey there kiddo. Seting Var to 2"))
+	setvar(VAR_COLUMBUS_INTRO_STATE, 2)
+	}
+	else
+	{
+	msgbox(format("Hey there kiddo. Seting Var to 1"))
+	setvar(VAR_COLUMBUS_INTRO_STATE, 1)
+	}
+	applymovement(Dad, moves(face_original_direction))
 	releaseall
 }

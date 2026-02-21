@@ -15,6 +15,7 @@
   "connections": null,
   "object_events": [
     {
+      "local_id": "Mom",
       "graphics_id": "OBJ_EVENT_GFX_MOM",
       "x": 13,
       "y": 6,
@@ -24,10 +25,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PlayersHouse_1F_Text_Mom_One",
+      "script": "PlayersHouse_1F_Text_Mom_Text_Real",
       "flag": "0"
     },
     {
+      "local_id": "Dad",
       "graphics_id": "OBJ_EVENT_GFX_DAD",
       "x": 10,
       "y": 6,
@@ -37,7 +39,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "PlayersHouse_1F_Text_Dad_One",
+      "script": "PlayersHouse_1F_Text_Dad_Text_Real",
       "flag": "0"
     }
   ],
@@ -102,18 +104,26 @@
     {
       "type": "sign",
       "x": 5,
-      "y": 7,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PlayersHouse_1F_Text_Plant_Three"
     },
     {
       "type": "sign",
-      "x": 5,
-      "y": 3,
+      "x": 1,
+      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PlayersHouse_1F_Text_Plant_Three"
+      "script": "PlayersHouse_1F_Text_Bookshelf"
+    },
+    {
+      "type": "sign",
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "PlayersHouse_1F_Text_Bookshelf"
     }
   ]
 }

@@ -584,6 +584,8 @@ const u16 gObjectEventPal_MagTwo[] = INCBIN_U16("graphics/object_events/pics/peo
 const u32 gObjectEventPic_My_Statue[] = INCBIN_U32("graphics/object_events/pics/misc/statue_build.4bpp");
 const u16 gObjectEventPal_My_Statue[] = INCBIN_U16("graphics/object_events/pics/misc/statue_build.gbapal");
 
+const u16 gObjectEventPal_My_Art_One[] = INCBIN_U16("graphics/object_events/pics/people/swimmer_m.gbapal");
+
 
 //====End of my Stuff====
 

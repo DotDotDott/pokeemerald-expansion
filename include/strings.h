@@ -2614,4 +2614,10 @@ extern const u8 gText_CannotSendMonToBoxHM[];
 extern const u8 gText_CannotSendMonToBoxActive[];
 extern const u8 gText_CannotSendMonToBoxPartner[];
 
+//My stuff
+//Dialouge choices
+extern const u8 gText_Test_Good[];
+extern const u8 gText_Test_Ok[];
+extern const u8 gText_Test_Bad[];
+
 #endif // GUARD_STRINGS_H

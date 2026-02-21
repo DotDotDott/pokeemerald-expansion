@@ -164,7 +164,7 @@
     {
       "id": "LAYOUT_ROUTE101",
       "name": "Route101_Layout",
-      "width": 68,
+      "width": 70,
       "height": 46,
       "primary_tileset": "gTileset_PorytilesPrimaryTest",
       "secondary_tileset": "gTileset_PorytilesSecondaryTutorialTwo",
@@ -574,8 +574,8 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
       "name": "LittlerootTown_ProfessorBirchsLab_Layout",
-      "width": 28,
-      "height": 22,
+      "width": 21,
+      "height": 18,
       "primary_tileset": "gTileset_PorytilePrimaryBuilding",
       "secondary_tileset": "gTileset_InsideSPOne",
       "border_filepath": "data/layouts/LittlerootTown_ProfessorBirchsLab/border.bin",

@@ -783,6 +783,15 @@ static const struct MenuAction MultichoiceList_Exit[] =
     {gText_Exit},
 };
 
+//My Stuff
+static const struct MenuAction MultichoiceList_Test[] =
+{
+    {gText_Test_Good},
+    {gText_Test_Ok},
+    {gText_Test_Bad},
+};
+
+
 struct MultichoiceListStruct
 {
     const struct MenuAction *list;
@@ -906,6 +915,8 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    //My Stuff
+    [MULTI_TEST]                 = MULTICHOICE(MultichoiceList_Test),
 };
 
 const u8 *const gStdStrings[] =

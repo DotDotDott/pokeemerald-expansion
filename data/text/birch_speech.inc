@@ -1,6 +1,6 @@
 gText_Birch_Welcome::
-	.string "Hi! Sorry to keep you all waiting!\p"
-	.string "Welcome one and all!\p"
+	.string "Why hello there everyone.\n"
+	.string "Sorry to keep you all waiting.\p"
 	.string "My name is Professor Tulipifera.\p"
 	.string "But most just call me Professor\n"
 	.string "Tulip.\p"
