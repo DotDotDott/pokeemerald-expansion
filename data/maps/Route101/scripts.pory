@@ -3,18 +3,54 @@ mapscripts Route101_MapScripts {}
 //state 0
 script Route1_Trigger_Prof_Attack_Event{
 	lockall
+	removeobject(2)
 	playbgm(MUS_HELP, TRUE)
 	fadescreen(FADE_FROM_BLACK)
 	applymovement(Sister, moves(walk_fast_right * 4))
-	applymovement(OBJ_EVENT_ID_PLAYER, moves(player_run_right * 4))
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(player_run_right * 4,face_down))
 	waitmovement(0)
 	applymovement(Sister, moves(face_up))
-	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+	waitmovement(0)
 	setspeaker("???")
 	msgbox(format("H-HEEEELLPPP!!!"), MSGBOX_NPC)
-	applymovement(prof, moves(walk_fast_down * 2))
-	applymovement(birdOne, moves(walk_fast_down * 2))
+	applymovement(prof, moves(walk_fast_down * 4))
+	applymovement(birdOne, moves(walk_fast_down * 4))
+	applymovement(birdTwo, moves(walk_fast_down * 4,walk_fast_left ))
 	waitmovement(0)
+	applymovement(prof, moves(jump_in_place_right))
+	waitmovement(0)
+	setspeaker("???")
+	msgbox(format("EEP"), MSGBOX_NPC)
+	addobject(2)
+	applymovement(prof, moves(walk_fast_left, walk_fast_up *2, face_right))
+	applymovement(birdOne, moves(delay_16, walk_fast_up,face_left))
+	applymovement(birdTwo, moves(delay_4,walk_fast_left *2, walk_fast_up))
+	waitmovement(0)
+	applymovement(prof, moves(face_right,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_down,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_right,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_down,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_right,delay_16))
+	waitmovement(0)
+	setspeaker("???")
+	msgbox(format("uh oh..."), MSGBOX_NPC)
+	//applymovement(prof, moves(walk_fast_left, walk_fast_up *3, face_right,delay_16,face_down,delay_16,face_right))
+
 	setvar(VAR_ROUTE101_STATE, 1)
 	releaseall
+}
+
+script Route101_EventScript_tulips_Bag {
+	lock
+	setflag(FLAG_SYS_POKEMON_GET)
+	setflag(FLAG_RESCUED_BIRCH)
+	fadescreen(FADE_TO_BLACK)
+	removeobject(5)
+	removeobject(6)
+	special(ChooseStarter)
+
 }
