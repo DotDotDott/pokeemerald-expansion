@@ -77,17 +77,7 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [
-    {
-      "type": "trigger",
-      "x": 2,
-      "y": 2,
-      "elevation": 0,
-      "var": "VAR_COLUMBUS_INTRO_STATE",
-      "var_value": "0",
-      "script": "PlayersHouse_2F_Annoyed_Sister"
-    }
-  ],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

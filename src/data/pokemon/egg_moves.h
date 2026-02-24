@@ -2520,6 +2520,23 @@ static const u16 sTaillowEggMoveLearnset[] = {
     MOVE_HURRICANE,
     MOVE_UNAVAILABLE,
 };
+
+static const u16 sTaillowMidwestEggMoveLearnset[] = {
+    MOVE_PURSUIT,
+    MOVE_SUPERSONIC,
+    MOVE_REFRESH,
+    MOVE_MIRROR_MOVE,
+    MOVE_RAGE,
+    MOVE_SKY_ATTACK,
+    MOVE_WHIRLWIND,
+    MOVE_BRAVE_BIRD,
+    MOVE_ROOST,
+    MOVE_STEEL_WING,
+    MOVE_DEFOG,
+    MOVE_BOOMBURST,
+    MOVE_HURRICANE,
+    MOVE_UNAVAILABLE,
+};
 #endif //P_FAMILY_TAILLOW
 
 #if P_FAMILY_WINGULL
@@ -4957,6 +4974,16 @@ static const u16 sFennekinEggMoveLearnset[] = {
     MOVE_PSYCHIC_TERRAIN,
     MOVE_UNAVAILABLE,
 };
+
+//My Stuff
+static const u16 sFennekinMidwestEggMoveLearnset[] = {
+    MOVE_WISH,
+    MOVE_HYPNOSIS,
+    MOVE_HEAT_WAVE,
+    MOVE_MAGIC_COAT,
+    MOVE_PSYCHIC_TERRAIN,
+    MOVE_UNAVAILABLE,
+};
 #endif //P_FAMILY_FENNEKIN
 
 #if P_FAMILY_FROAKIE
@@ -5263,6 +5290,16 @@ static const u16 sNoibatEggMoveLearnset[] = {
 
 #if P_FAMILY_ROWLET
 static const u16 sRowletEggMoveLearnset[] = {
+    MOVE_CURSE,
+    MOVE_CONFUSE_RAY,
+    MOVE_OMINOUS_WIND,
+    MOVE_HAZE,
+    MOVE_BATON_PASS,
+    MOVE_DEFOG,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sRowletMidwestEggMoveLearnset[] = {
     MOVE_CURSE,
     MOVE_CONFUSE_RAY,
     MOVE_OMINOUS_WIND,

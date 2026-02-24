@@ -2308,6 +2308,9 @@ static const struct SpriteFrameImage sPicTable_ShiftryF[] = {
 static const struct SpriteFrameImage sPicTable_Taillow[] = {
     overworld_ascending_frames(gObjectEventPic_Taillow, 4, 4),
 };
+static const struct SpriteFrameImage sPicTable_Taillow_Midwest[] = {
+    overworld_ascending_frames(gObjectEventPic_Taillow_Midwest, 4, 4),
+};
 static const struct SpriteFrameImage sPicTable_Swellow[] = {
     overworld_ascending_frames(gObjectEventPic_Swellow, 4, 4),
 };
@@ -4578,6 +4581,11 @@ static const struct SpriteFrameImage sPicTable_Braixen[] = {
 static const struct SpriteFrameImage sPicTable_Delphox[] = {
     overworld_ascending_frames(gObjectEventPic_Delphox, 4, 4),
 };
+
+//My stuff
+static const struct SpriteFrameImage sPicTable_Fennekin_Midwest[] = {
+    overworld_ascending_frames(gObjectEventPic_Fennekin_Midwest, 4, 4),
+};
 #endif //P_FAMILY_FENNEKIN
 
 #if P_FAMILY_FROAKIE
@@ -5083,6 +5091,11 @@ static const struct SpriteFrameImage sPicTable_Volcanion[] = {
 static const struct SpriteFrameImage sPicTable_Rowlet[] = {
     overworld_ascending_frames(gObjectEventPic_Rowlet, 4, 4),
 };
+
+static const struct SpriteFrameImage sPicTable_Rowlet_Midwest[] = {
+    overworld_ascending_frames(gObjectEventPic_Rowlet_Midwest, 4, 4),
+};
+
 static const struct SpriteFrameImage sPicTable_Dartrix[] = {
     overworld_ascending_frames(gObjectEventPic_Dartrix, 4, 4),
 };

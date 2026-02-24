@@ -13405,6 +13405,30 @@ static const u16 sTaillowTeachableLearnset[] = {
     MOVE_UNAVAILABLE,
 };
 
+static const u16 sTaillowMidwestTeachableLearnset[] = {
+    MOVE_AERIAL_ACE,
+    MOVE_ATTRACT,
+    MOVE_COUNTER,
+    MOVE_DOUBLE_EDGE,
+    MOVE_DOUBLE_TEAM,
+    MOVE_ENDURE,
+    MOVE_FACADE,
+    MOVE_FLY,
+    MOVE_MUD_SLAP,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REST,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_STEEL_WING,
+    MOVE_SUNNY_DAY,
+    MOVE_SWAGGER,
+    MOVE_SWIFT,
+    MOVE_THIEF,
+    MOVE_TOXIC,
+    MOVE_UNAVAILABLE,
+};
+
 static const u16 sSwellowTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
@@ -26588,6 +26612,39 @@ static const u16 sDelphoxTeachableLearnset[] = {
     MOVE_TOXIC,
     MOVE_UNAVAILABLE,
 };
+
+//My Stuff
+static const u16 sFennekinMidwestTeachableLearnset[] = {
+    MOVE_ATTRACT,
+    MOVE_CALM_MIND,
+    MOVE_CUT,
+    MOVE_DOUBLE_TEAM,
+    MOVE_DREAM_EATER,
+    MOVE_ENDURE,
+    MOVE_FACADE,
+    MOVE_FIRE_BLAST,
+    MOVE_FLAMETHROWER,
+    MOVE_IRON_TAIL,
+    MOVE_LIGHT_SCREEN,
+    MOVE_MUD_SLAP,
+    MOVE_OVERHEAT,
+    MOVE_PROTECT,
+    MOVE_PSYCHIC,
+    MOVE_PSYCH_UP,
+    MOVE_RAIN_DANCE,
+    MOVE_REST,
+    MOVE_SAFEGUARD,
+    MOVE_SKILL_SWAP,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_SOLAR_BEAM,
+    MOVE_SUNNY_DAY,
+    MOVE_SWAGGER,
+    MOVE_SWIFT,
+    MOVE_THIEF,
+    MOVE_TOXIC,
+    MOVE_UNAVAILABLE,
+};
 #endif //P_FAMILY_FENNEKIN
 
 #if P_FAMILY_FROAKIE
@@ -28897,6 +28954,31 @@ static const u16 sVolcanionTeachableLearnset[] = {
 
 #if P_FAMILY_ROWLET
 static const u16 sRowletTeachableLearnset[] = {
+    MOVE_AERIAL_ACE,
+    MOVE_ATTRACT,
+    MOVE_BULLET_SEED,
+    MOVE_DOUBLE_TEAM,
+    MOVE_ENDURE,
+    MOVE_FACADE,
+    MOVE_GIGA_DRAIN,
+    MOVE_LIGHT_SCREEN,
+    MOVE_PROTECT,
+    MOVE_RAIN_DANCE,
+    MOVE_REST,
+    MOVE_SAFEGUARD,
+    MOVE_SLEEP_TALK,
+    MOVE_SNORE,
+    MOVE_SOLAR_BEAM,
+    MOVE_STEEL_WING,
+    MOVE_SUNNY_DAY,
+    MOVE_SWAGGER,
+    MOVE_SWIFT,
+    MOVE_SWORDS_DANCE,
+    MOVE_TOXIC,
+    MOVE_UNAVAILABLE,
+};
+
+static const u16 sRowletMidwestTeachableLearnset[] = {
     MOVE_AERIAL_ACE,
     MOVE_ATTRACT,
     MOVE_BULLET_SEED,

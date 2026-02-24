@@ -120,7 +120,7 @@ Columbus_Trigger_Sister_Outside_Libary::
 # 71 "data/maps/LittlerootTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_Sister_Outside_Libary_Movement_6
 # 72 "data/maps/LittlerootTown/scripts.pory"
-	warp MAP_ROUTE101, 0, 27
+	warp MAP_ROUTE101, 1, 26
 # 76 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return

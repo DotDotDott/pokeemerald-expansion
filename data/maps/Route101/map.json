@@ -49,12 +49,12 @@
       "x": 5,
       "y": 24,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "Route101_EventScript_tulips_Bag",
       "flag": "FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG"
     },
     {
@@ -87,7 +87,7 @@
     },
     {
       "local_id": "birdOne",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TAILLOW)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TAILLOW_MIDWEST)",
       "x": 5,
       "y": 19,
       "elevation": 0,
@@ -101,7 +101,7 @@
     },
     {
       "local_id": "birdTwo",
-      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TAILLOW)",
+      "graphics_id": "OBJ_EVENT_GFX_SPECIES(TAILLOW_MIDWEST)",
       "x": 7,
       "y": 20,
       "elevation": 0,
@@ -124,8 +124,22 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
+      "script": "Route101_EventTest_VikiWhatDoWeDo",
+      "flag": "FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE"
+    },
+    {
+      "local_id": "assistant",
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_M",
+      "x": 5,
+      "y": 19,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_RUN_IN_PLACE_DOWN",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE"
     }
   ],
   "warp_events": [],
@@ -135,9 +149,81 @@
       "x": 1,
       "y": 26,
       "elevation": 0,
-      "var": "VAR_ROUTE101_STATE",
+      "var": "VAR_TEMP_4",
       "var_value": "0",
-      "script": "Route1_Trigger_Prof_Attack_Event"
+      "script": "Route101_OnWarp"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_West"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_West"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_West"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_North"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_NorthTwo"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_East"
+    },
+    {
+      "type": "trigger",
+      "x": 7,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_East"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 28,
+      "elevation": 0,
+      "var": "VAR_ROUTE101_STATE",
+      "var_value": "1",
+      "script": "Route101_Trigger_BlockPath_East"
     }
   ],
   "bg_events": []

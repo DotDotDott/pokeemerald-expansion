@@ -162,11 +162,11 @@ const struct BattleEnvironment gBattleEnvironmentInfo[BATTLE_ENVIRONMENT_COUNT] 
         .camouflageType = (B_CAMOUFLAGE_TYPES == GEN_4 || B_CAMOUFLAGE_TYPES == GEN_5) ? TYPE_GROUND : TYPE_NORMAL,
         .background =
         {
-            .tileset = gBattleEnvironmentTiles_Building,
-            .tilemap = gBattleEnvironmentTilemap_Building,
-            .entryTileset = gBattleEnvironmentAnimTiles_Building,
-            .entryTilemap = gBattleEnvironmentAnimTilemap_Building,
-            .palette = gBattleEnvironmentPalette_Plain,
+            .tileset = gBattleEnvironmentTiles_TallGrass,
+            .tilemap = gBattleEnvironmentTilemap_TallGrass,
+            .entryTileset = gBattleEnvironmentAnimTiles_TallGrass,
+            .entryTilemap = gBattleEnvironmentAnimTilemap_TallGrass,
+            .palette = gBattleEnvironmentPalette_TallGrass,
         },
     },
 

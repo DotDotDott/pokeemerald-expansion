@@ -26796,6 +26796,60 @@ const u32 gObjectEventPic_Substitute[] = INCBIN_COMP("graphics/pokemon/question_
 #endif //OW_POKEMON_OBJECT_EVENTS
 #endif //P_FAMILY_PECHARUNT
 
+//My Stuff
+
+//Midwest Fennikin
+    const u32 gMonFrontPic_Fennekin_Midwest[] = INCBIN_U32("graphics/pokemon/fennekin/midwest/anim_front.4bpp.smol");
+    const u16 gMonPalette_Fennekin_Midwest[] = INCBIN_U16("graphics/pokemon/fennekin/midwest/normal.gbapal");
+    const u32 gMonBackPic_Fennekin_Midwest[] = INCBIN_U32("graphics/pokemon/fennekin/midwest/back.4bpp.smol");
+    const u16 gMonShinyPalette_Fennekin_Midwest[] = INCBIN_U16("graphics/pokemon/fennekin/midwest/shiny.gbapal");
+    const u8 gMonIcon_Fennekin_Midwest[] = INCBIN_U8("graphics/pokemon/fennekin/midwest/icon.4bpp");
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_Fennekin_Midwest[] = INCBIN_U8("graphics/pokemon/fennekin/footprint.1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_Fennekin_Midwest[] = INCBIN_COMP("graphics/pokemon/fennekin/midwest/overworld.4bpp");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_Fennekin_Midwest[] = INCBIN_U16("graphics/pokemon/fennekin/midwest/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_Fennekin_Midwest[] = INCBIN_U16("graphics/pokemon/fennekin/midwest/overworld_shiny.gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+
+//Midwest Rowlet
+    const u32 gMonFrontPic_Rowlet_Midwest[] = INCBIN_U32("graphics/pokemon/rowlet/midwest/anim_front.4bpp.smol");
+    const u16 gMonPalette_Rowlet_Midwest[] = INCBIN_U16("graphics/pokemon/rowlet/midwest/normal.gbapal");
+    const u32 gMonBackPic_Rowlet_Midwest[] = INCBIN_U32("graphics/pokemon/rowlet/midwest/back.4bpp.smol");
+    const u16 gMonShinyPalette_Rowlet_Midwest[] = INCBIN_U16("graphics/pokemon/rowlet/midwest/shiny.gbapal");
+    const u8 gMonIcon_Rowlet_Midwest[] = INCBIN_U8("graphics/pokemon/rowlet/midwest/icon.4bpp");
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_Rowlet_Midwest[] = INCBIN_U8("graphics/pokemon/rowlet/footprint.1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_Rowlet_Midwest[] = INCBIN_COMP("graphics/pokemon/rowlet/midwest/overworld.4bpp");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_Rowlet_Midwest[] = INCBIN_U16("graphics/pokemon/rowlet/midwest/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_Rowlet_Midwest[] = INCBIN_U16("graphics/pokemon/rowlet/midwest/overworld_shiny.gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+
+//Midwest Taillow
+    const u32 gMonFrontPic_Taillow_Midwest[] = INCBIN_U32("graphics/pokemon/taillow/midwest/anim_front.4bpp.smol");
+    const u16 gMonPalette_Taillow_Midwest[] = INCBIN_U16("graphics/pokemon/taillow/midwest/normal.gbapal");
+    const u32 gMonBackPic_Taillow_Midwest[] = INCBIN_U32("graphics/pokemon/taillow/midwest/back.4bpp.smol");
+    const u16 gMonShinyPalette_Taillow_Midwest[] = INCBIN_U16("graphics/pokemon/taillow/midwest/shiny.gbapal");
+    const u8 gMonIcon_Taillow_Midwest[] = INCBIN_U8("graphics/pokemon/taillow/midwest/icon.4bpp");
+#if P_FOOTPRINTS
+    const u8 gMonFootprint_Taillow_Midwest[] = INCBIN_U8("graphics/pokemon/taillow/footprint.1bpp");
+#endif //P_FOOTPRINTS
+#if OW_POKEMON_OBJECT_EVENTS
+    const u32 gObjectEventPic_Taillow_Midwest[] = INCBIN_COMP("graphics/pokemon/taillow/midwest/overworld.4bpp");
+#if OW_PKMN_OBJECTS_SHARE_PALETTES == FALSE
+    const u16 gOverworldPalette_Taillow_Midwest[] = INCBIN_U16("graphics/pokemon/taillow/midwest/overworld_normal.gbapal");
+    const u16 gShinyOverworldPalette_Taillow_Midwest[] = INCBIN_U16("graphics/pokemon/taillow/midwest/overworld_shiny.gbapal");
+#endif //OW_PKMN_OBJECTS_SHARE_PALETTES
+#endif //OW_POKEMON_OBJECT_EVENTS
+
+
     const u32 gMonFrontPic_Egg[] = INCBIN_U32("graphics/pokemon/egg/anim_front.4bpp.smol");
     const u16 gMonPalette_Egg[] = INCBIN_U16("graphics/pokemon/egg/normal.gbapal");
     const u8 gMonIcon_Egg[] = INCBIN_U8("graphics/pokemon/egg/icon.4bpp");

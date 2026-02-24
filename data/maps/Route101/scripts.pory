@@ -1,4 +1,68 @@
-mapscripts Route101_MapScripts {}
+mapscripts Route101_MapScripts {
+	MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE[
+		VAR_TEMP_4, 0:Route101_OnWarp
+	] 
+	MAP_SCRIPT_ON_TRANSITION: Route101_OnTransition
+	MAP_SCRIPT_ON_FRAME_TABLE [
+	VAR_TEMP_2, 0:Route101_EveryFrame	
+	]
+}
+
+script Route101_OnWarp{
+	hideobjectat(2,MAP_ROUTE101)
+	playbgm(MUS_HELP, TRUE)
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(player_run_right * 5,face_down))
+	applymovement(Sister, moves(walk_fast_right * 4))
+
+}
+
+script Route101_OnTransition{
+	setvar(VAR_TEMP_2,0)
+	//removeobject(2)
+}
+
+script Route101_EveryFrame {
+    if(var(VAR_ROUTE101_STATE) == 0)
+	{
+	lockall
+	waitmovement(0)
+	applymovement(Sister, moves(face_up))
+	waitmovement(0)
+	
+	setspeaker(SP_NAME_IDK)
+	msgbox(format("H-HEEEELLPPP!!!"), MSGBOX_NPC)
+	applymovement(prof, moves(walk_fast_down * 4))
+	applymovement(birdOne, moves(walk_fast_down * 4))
+	applymovement(birdTwo, moves(walk_fast_down * 4,walk_fast_left ))
+	waitmovement(0)
+	applymovement(prof, moves(jump_in_place_right))
+	waitmovement(0)
+	setspeaker(SP_NAME_IDK)
+	msgbox(format("EEP"), MSGBOX_NPC)
+	applymovement(prof, moves(walk_fast_left, walk_fast_up *2, face_right))
+	showobjectat(2,MAP_ROUTE101)
+	applymovement(birdOne, moves(delay_16, walk_fast_up,face_left))
+	applymovement(birdTwo, moves(delay_4,walk_fast_left *2, walk_fast_up))
+	waitmovement(0)
+	applymovement(prof, moves(face_right,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_down,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_right,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_down,delay_16))
+	waitmovement(0)
+	applymovement(prof, moves(face_right,delay_16))
+	waitmovement(0)
+	setspeaker(SP_NAME_IDK)
+	msgbox(format("uh oh..."), MSGBOX_NPC)
+	//applymovement(prof, moves(walk_fast_left, walk_fast_up *3, face_right,delay_16,face_down,delay_16,face_right))
+
+	setvar(VAR_ROUTE101_STATE, 1)
+	setvar(VAR_TEMP_2, 1)
+	releaseall
+	}
+}
 
 //state 0
 script Route1_Trigger_Prof_Attack_Event{
@@ -11,7 +75,7 @@ script Route1_Trigger_Prof_Attack_Event{
 	waitmovement(0)
 	applymovement(Sister, moves(face_up))
 	waitmovement(0)
-	setspeaker("???")
+	setspeaker(SP_NAME_IDK)
 	msgbox(format("H-HEEEELLPPP!!!"), MSGBOX_NPC)
 	applymovement(prof, moves(walk_fast_down * 4))
 	applymovement(birdOne, moves(walk_fast_down * 4))
@@ -19,7 +83,7 @@ script Route1_Trigger_Prof_Attack_Event{
 	waitmovement(0)
 	applymovement(prof, moves(jump_in_place_right))
 	waitmovement(0)
-	setspeaker("???")
+	setspeaker(SP_NAME_IDK)
 	msgbox(format("EEP"), MSGBOX_NPC)
 	addobject(2)
 	applymovement(prof, moves(walk_fast_left, walk_fast_up *2, face_right))
@@ -36,21 +100,98 @@ script Route1_Trigger_Prof_Attack_Event{
 	waitmovement(0)
 	applymovement(prof, moves(face_right,delay_16))
 	waitmovement(0)
-	setspeaker("???")
+	setspeaker(SP_NAME_IDK)
 	msgbox(format("uh oh..."), MSGBOX_NPC)
 	//applymovement(prof, moves(walk_fast_left, walk_fast_up *3, face_right,delay_16,face_down,delay_16,face_right))
 
 	setvar(VAR_ROUTE101_STATE, 1)
 	releaseall
 }
-
+//state 1 (while prof is being attacked)
 script Route101_EventScript_tulips_Bag {
 	lock
+	setspeaker(SP_NAME_VIKI)
+	applymovement(Sister, moves(emote_question_mark))
+	waitmovement(0)
+	msgbox(format("Wait...\p what are you?"), MSGBOX_NPC)
+	applymovement(Sister, moves(walk_up * 2, face_left))
+	waitmovement(0)
+	setspeaker(SP_NAME_VIKI)
+	msgbox(format("I'll grab one too, that way we can even the odds"), MSGBOX_NPC)
+	waitmessage
+	fadescreen(FADE_TO_BLACK)
 	setflag(FLAG_SYS_POKEMON_GET)
 	setflag(FLAG_RESCUED_BIRCH)
-	fadescreen(FADE_TO_BLACK)
 	removeobject(5)
 	removeobject(6)
+	setflag(FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)
 	special(ChooseStarter)
+	waitstate
+	applymovement(prof, moves(walk_right,walk_down))
+	waitmovement(0)
+	removeobject(2)
+	setspeaker(SP_NAME_PROF)
+	msgbox(format("Wow! Thanks"), MSGBOX_NPC)
+	applymovement(8, moves(walk_fast_down * 3))
+	setspeaker("Lirio")
+	msgbox(format("Tulip your ok!"), MSGBOX_NPC)
+	applymovement(prof, moves(face_up))
+	setspeaker(SP_NAME_PROF)
+	msgbox(format("No thanks to you"), MSGBOX_NPC)	
+	applymovement(prof, moves(face_down))
+	msgbox(format("Now lets all go to the libary"), MSGBOX_NPC)	
+	special(HealPlayerParty)
+	setflag(FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)
+	setflag(FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE)
+	setflag(FLAG_SYS_POKEMON_GET)
+	warp (MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 9, 7)
+
+}
+
+script Route101_Trigger_BlockPath_West{
+	lock
+	applymovement(Sister, moves(face_player))
+	setspeaker(SP_NAME_VIKI)
+	msgbox(format("Where are you going? We can't just leave her here!"), MSGBOX_NPC)
+	applymovement(Sister, moves(face_up))
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_right))
+	waitmovement(0)
+	releaseall
+}
+
+script Route101_Trigger_BlockPath_East{
+	lock
+	applymovement(Sister, moves(face_player))
+	setspeaker(SP_NAME_VIKI)
+	msgbox(format("Where are you going? We can't just leave her here!"), MSGBOX_NPC)
+	applymovement(Sister, moves(face_up))
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+	waitmovement(0)
+	releaseall
+}
+
+script Route101_Trigger_BlockPath_North{
+	lock
+	setspeaker(SP_NAME_VIKI)
+	msgbox(format("Hey idiot, don't walk into the grass without Pokémon!"), MSGBOX_NPC)
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_down))
+	waitmovement(0)
+	releaseall
+}
+
+script Route101_Trigger_BlockPath_NorthTwo{
+	lock
+	setspeaker(SP_NAME_VIKI)
+	msgbox(format("Hey idiot, don't walk into the grass without Pokémon!"), MSGBOX_NPC)
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(walk_left))
+	waitmovement(0)
+	releaseall
+}
+
+script Route101_EventTest_VikiWhatDoWeDo {
+	lock
+	setspeaker(SP_NAME_VIKI)
+	msgbox(format("We gotta help her! But how?"), MSGBOX_NPC)
+	releaseall
 
 }

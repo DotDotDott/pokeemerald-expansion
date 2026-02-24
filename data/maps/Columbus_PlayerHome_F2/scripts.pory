@@ -1,4 +1,7 @@
 mapscripts Columbus_PlayerHome_F2_MapScripts {
+	MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE [
+		VAR_TEMP_4, 0:trigger_test
+	]
 	MAP_SCRIPT_ON_TRANSITION: OnTransitionTest
 	MAP_SCRIPT_ON_FRAME_TABLE [
 	VAR_TEMP_2, 0:EveryFrameTest
@@ -7,20 +10,33 @@ mapscripts Columbus_PlayerHome_F2_MapScripts {
     
 }
 //intro of game stuff
+script test_OnWarp{
+	//applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+	//waitmovement(0)
+	//turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+
+}
+
+script trigger_test{
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+	//waitmovement(0)
+
+}
 
 script OnTransitionTest{
-	setvar(VAR_TEMP_2,0)
 	
+	setvar(VAR_TEMP_2,0)
 }
+
 
 script EveryFrameTest {
     if(var(VAR_COLUMBUS_INTRO_STATE) == 0)
 	{
 	lockall
-	setmetatile(2,2,0,26)
+	//setmetatile(2,2,0,26)
 	setflag(FLAG_RECEIVED_RUNNING_SHOES)
 	setflag(FLAG_SYS_B_DASH)
-	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
+	//applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
 	setspeaker("Viki")
 	msgbox(fromat("Hey you little brat."))
 	waitmessage
@@ -39,7 +55,7 @@ script EveryFrameTest {
 	releaseall	
 	}
 	else{
-	setmetatile(2,2,0,26)
+	//setmetatile(2,2,0,26)
 	}
     setvar(VAR_TEMP_2, 1)
 }
@@ -116,47 +132,4 @@ script PlayersHouse_2F_Text_Player_Sis_Bed {
 	It looks like she's been struggling\n
 	to sleep well recently.")
 	releaseall
-}
-
-
-
-script PlayersHouse_2F_Annoyed_Sister {
-	lockall
-	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-	msgbox(fromat("Sister: Hey you little brat."))
-	waitmessage
-	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
-	waitmovement(0)
-	msgbox("Sister: Let's go already")
-	applymovement(sisIntro, moves( walk_right * 4, walk_down * 7,walk_right))
-	waitmovement(0)
-	removeobject(sisIntro)
-	setflag(FLAG_UNUSED_0x020)
-	//setvar(VAR_COLUMBUS_INTRO_STATE, 1)
-	releaseall	
-}
-
-script OnTransition {
-	msgbox(fromat("Sister: Hey you little brat."))
-	if(var(VAR_COLUMBUS_INTRO_STATE) == 2)
-	{
-	lockall
-	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_up))
-	msgbox(fromat("Sister: Hey you little brat."))
-	waitmessage
-	closemessage
-	applymovement(sisIntro, moves( walk_up * 7, walk_left * 4))
-	waitmovement(0)
-	msgbox("Sister: Let's go already")
-	closemessage
-	applymovement(sisIntro, moves( walk_right * 4, walk_down * 7,walk_right))
-	waitmovement(0)
-	removeobject(sisIntro)
-	setflag(FLAG_UNUSED_0x020)
-	setvar(VAR_COLUMBUS_INTRO_STATE, 1)
-	releaseall	
-	}
-	else{
-
-	}
 }
