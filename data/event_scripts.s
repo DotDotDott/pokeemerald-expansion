@@ -1194,3 +1194,5 @@ EventScript_VsSeekerChargingDone::
 	.include "data/scripts/apricorn_tree.inc"
 
 	.include "data/maps/SproutPC_F2/scripts.inc"
+
+	.include "data/maps/Sprout_Library/scripts.inc"

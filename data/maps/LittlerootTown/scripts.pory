@@ -69,9 +69,17 @@ script Columbus_Trigger_Sister_Outside_Libary{
 	setflag(FLAG_UNUSED_0x022)
 	setvar(VAR_COLUMBUS_INTRO_STATE, 2)
 	applymovement(OBJ_EVENT_ID_PLAYER, moves(face_right))
-	warp (MAP_ROUTE101, 1, 26)
+	warpcontinuescript (MAP_ROUTE101, 1, 26,continueAfterWarpTest)
 	
 	//hold camrea and fade out to scene on next route as viki runs off screen and player runs behind them?
 
 	releaseall
+}
+
+script continueAfterWarpTest {
+	playbgm(MUS_HELP, TRUE)
+	hideobjectat(2,MAP_ROUTE101)
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(player_run_right * 5,face_down))
+	applymovement(Sister, moves(walk_fast_right * 4))
+	fadescreen(FADE_FROM_BLACK)
 }

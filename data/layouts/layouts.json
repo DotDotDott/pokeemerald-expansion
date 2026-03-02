@@ -564,7 +564,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_2F",
       "name": "LittlerootTown_MaysHouse_2F_Layout",
-      "width": 11,
+      "width": 8,
       "height": 12,
       "primary_tileset": "gTileset_PorytilePrimaryBuilding",
       "secondary_tileset": "gTileset_porytilesInsideOne",
@@ -4490,6 +4490,16 @@
       "secondary_tileset": "gTileset_porytiles_sec_MyPC",
       "border_filepath": "data/layouts/SproutPC_F2/border.bin",
       "blockdata_filepath": "data/layouts/SproutPC_F2/map.bin"
+    },
+    {
+      "id": "LAYOUT_SPROUT_LIBRARY",
+      "name": "Sprout_Library_Layout",
+      "width": 21,
+      "height": 18,
+      "primary_tileset": "gTileset_PorytilePrimaryBuilding",
+      "secondary_tileset": "gTileset_InsideSPOne",
+      "border_filepath": "data/layouts/Sprout_Library/border.bin",
+      "blockdata_filepath": "data/layouts/Sprout_Library/map.bin"
     }
   ]
 }

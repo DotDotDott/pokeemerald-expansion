@@ -2774,7 +2774,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TogepiDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyndaquilDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_OTHER_ROCKS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -2793,7 +2793,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CyndaquilDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ChikoritaDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_MY_TRASH,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -2812,7 +2812,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_ChikoritaDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TotodileDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .paletteTag = OBJ_EVENT_PAL_TAG_OTHER_ROCKS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -2907,7 +2907,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DittoDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SmoochumDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_OTHER_ROCKS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -2926,7 +2926,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SmoochumDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TreeckoDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_OTHER_ROCKS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -2945,7 +2945,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TreeckoDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_TorchicDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
+    .paletteTag = OBJ_EVENT_PAL_TAG_OTHER_ROCKS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -2983,7 +2983,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_MudkipDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_DuskullDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .paletteTag = OBJ_EVENT_PAL_TAG_OTHER_ROCKS,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -3021,7 +3021,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_WynautDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BaltoyDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
+    .paletteTag = OBJ_EVENT_PAL_TAG_MY_CONE,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 128,
     .width = 16,
@@ -3496,8 +3496,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigWailmerDoll = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigRegirockDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_1,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
     .size = 512,
     .width = 32,
     .height = 32,
@@ -3515,8 +3515,8 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigRegirockDoll = 
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigRegiceDoll = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
     .size = 512,
     .width = 32,
     .height = 32,
@@ -3535,7 +3535,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigRegiceDoll = {
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_BigRegisteelDoll = {
     .tileTag = TAG_NONE,
     .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
-    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
     .size = 512,
     .width = 32,
     .height = 32,
@@ -3838,7 +3838,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Fossil = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_2,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,
@@ -3857,7 +3857,7 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regirock = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Regice = {
     .tileTag = TAG_NONE,
-    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_3,
+    .paletteTag = OBJ_EVENT_PAL_TAG_NPC_4,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,

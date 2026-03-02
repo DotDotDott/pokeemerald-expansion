@@ -9,10 +9,7 @@ mapscripts Route101_MapScripts {
 }
 
 script Route101_OnWarp{
-	hideobjectat(2,MAP_ROUTE101)
-	playbgm(MUS_HELP, TRUE)
-	applymovement(OBJ_EVENT_ID_PLAYER, moves(player_run_right * 5,face_down))
-	applymovement(Sister, moves(walk_fast_right * 4))
+
 
 }
 
@@ -40,7 +37,8 @@ script Route101_EveryFrame {
 	setspeaker(SP_NAME_IDK)
 	msgbox(format("EEP"), MSGBOX_NPC)
 	applymovement(prof, moves(walk_fast_left, walk_fast_up *2, face_right))
-	showobjectat(2,MAP_ROUTE101)
+	addobject(2,MAP_ROUTE101)
+	//showobjectat(2,MAP_ROUTE101)
 	applymovement(birdOne, moves(delay_16, walk_fast_up,face_left))
 	applymovement(birdTwo, moves(delay_4,walk_fast_left *2, walk_fast_up))
 	waitmovement(0)
@@ -144,8 +142,12 @@ script Route101_EventScript_tulips_Bag {
 	setflag(FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG)
 	setflag(FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE)
 	setflag(FLAG_SYS_POKEMON_GET)
-	warp (MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 9, 7)
+	warp (MAP_SPROUT_LIBRARY, 6, 7)
 
+}
+
+script Route101_afterWarp {
+	applymovement(OBJ_EVENT_ID_PLAYER, moves(player_face_up))
 }
 
 script Route101_Trigger_BlockPath_West{

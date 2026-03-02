@@ -120,9 +120,23 @@ Columbus_Trigger_Sister_Outside_Libary::
 # 71 "data/maps/LittlerootTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, Columbus_Trigger_Sister_Outside_Libary_Movement_6
 # 72 "data/maps/LittlerootTown/scripts.pory"
-	warp MAP_ROUTE101, 1, 26
+	warpcontinuescript MAP_ROUTE101, 1, 26, continueAfterWarpTest
 # 76 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
+	return
+
+
+continueAfterWarpTest::
+# 80 "data/maps/LittlerootTown/scripts.pory"
+	playbgm MUS_HELP, TRUE
+# 81 "data/maps/LittlerootTown/scripts.pory"
+	removeobject 2, MAP_ROUTE101
+# 82 "data/maps/LittlerootTown/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, continueAfterWarpTest_Movement_0
+# 83 "data/maps/LittlerootTown/scripts.pory"
+	applymovement Sister, continueAfterWarpTest_Movement_1
+# 84 "data/maps/LittlerootTown/scripts.pory"
+	fadescreen FADE_FROM_BLACK
 	return
 
 
@@ -216,6 +230,34 @@ Columbus_Trigger_Sister_Outside_Libary_Movement_5:
 Columbus_Trigger_Sister_Outside_Libary_Movement_6:
 # 71 "data/maps/LittlerootTown/scripts.pory"
 	face_right
+	step_end
+
+# 82 "data/maps/LittlerootTown/scripts.pory"
+continueAfterWarpTest_Movement_0:
+# 82 "data/maps/LittlerootTown/scripts.pory"
+	player_run_right
+# 82 "data/maps/LittlerootTown/scripts.pory"
+	player_run_right
+# 82 "data/maps/LittlerootTown/scripts.pory"
+	player_run_right
+# 82 "data/maps/LittlerootTown/scripts.pory"
+	player_run_right
+# 82 "data/maps/LittlerootTown/scripts.pory"
+	player_run_right
+# 82 "data/maps/LittlerootTown/scripts.pory"
+	face_down
+	step_end
+
+# 83 "data/maps/LittlerootTown/scripts.pory"
+continueAfterWarpTest_Movement_1:
+# 83 "data/maps/LittlerootTown/scripts.pory"
+	walk_fast_right
+# 83 "data/maps/LittlerootTown/scripts.pory"
+	walk_fast_right
+# 83 "data/maps/LittlerootTown/scripts.pory"
+	walk_fast_right
+# 83 "data/maps/LittlerootTown/scripts.pory"
+	walk_fast_right
 	step_end
 
 Columbus_text_espeon_statue_Text_0:

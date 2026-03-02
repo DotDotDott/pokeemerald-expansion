@@ -537,6 +537,9 @@
 #define OBJ_EVENT_PAL_TAG_WALLY            0x1219
 #define OBJ_EVENT_PAL_TAG_MY_STATUE            0x1220
 #define OBJ_EVENT_PAL_TAG_MY_ART            0x122A
+#define OBJ_EVENT_PAL_TAG_MY_CONE            0x122B
+#define OBJ_EVENT_PAL_TAG_MY_TRASH            0x122C
+#define OBJ_EVENT_PAL_TAG_OTHER_ROCKS            0x122D
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

@@ -586,6 +586,10 @@ const u16 gObjectEventPal_My_Statue[] = INCBIN_U16("graphics/object_events/pics/
 
 const u16 gObjectEventPal_My_Art_One[] = INCBIN_U16("graphics/object_events/pics/people/swimmer_m.gbapal");
 
+const u16 gObjectEventPal_My_Cone[] = INCBIN_U16("graphics/object_events/pics/dolls/baltoy_doll.gbapal");
+const u16 gObjectEventPal_My_Trash[] = INCBIN_U16("graphics/object_events/pics/dolls/chikorita_doll.gbapal");
+const u16 gObjectEventPal_Other_Rocks[] = INCBIN_U16("graphics/object_events/palettes/my_pals/other_rocks.gbapal");
+
 
 //====End of my Stuff====
 

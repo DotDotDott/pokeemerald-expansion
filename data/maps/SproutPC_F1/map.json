@@ -44,6 +44,106 @@
       "dest_warp_id": "0"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "NULL"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "MartMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "CenterMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "MartMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "MartMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "MartMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "0",
+      "script": "MartMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "CenterMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "CenterMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "CenterMusic"
+    },
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_2",
+      "var_value": "1",
+      "script": "CenterMusic"
+    }
+  ],
   "bg_events": []
 }

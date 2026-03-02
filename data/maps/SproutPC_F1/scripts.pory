@@ -1,1 +1,10 @@
 mapscripts SproutPC_F1_MapScripts {}
+
+script MartMusic {
+    playbgm(MUS_POKE_MART, TRUE)
+    setvar(VAR_TEMP_2, 1)
+}
+script CenterMusic {
+    playbgm(MUS_POKE_CENTER, TRUE)
+    setvar(VAR_TEMP_2, 0)
+}
