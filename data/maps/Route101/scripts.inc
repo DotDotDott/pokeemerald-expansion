@@ -258,90 +258,94 @@ Route101_EventScript_tulips_Bag::
 # 144 "data/maps/Route101/scripts.pory"
 	setflag FLAG_SYS_POKEMON_GET
 # 145 "data/maps/Route101/scripts.pory"
-	warp MAP_SPROUT_LIBRARY, 9, 7
+	warp MAP_SPROUT_LIBRARY, 6, 7
+	return
+
+
+Route101_afterWarp::
 	return
 
 
 Route101_Trigger_BlockPath_West::
-# 150 "data/maps/Route101/scripts.pory"
-	lock
-# 151 "data/maps/Route101/scripts.pory"
-	applymovement Sister, Route101_Trigger_BlockPath_West_Movement_0
-# 152 "data/maps/Route101/scripts.pory"
-	setspeaker SP_NAME_VIKI
-# 153 "data/maps/Route101/scripts.pory"
-	msgbox Route101_Trigger_BlockPath_West_Text_0, MSGBOX_NPC
 # 154 "data/maps/Route101/scripts.pory"
-	applymovement Sister, Route101_EveryFrame_Movement_0
+	lock
 # 155 "data/maps/Route101/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_West_Movement_1
+	applymovement Sister, Route101_Trigger_BlockPath_West_Movement_0
 # 156 "data/maps/Route101/scripts.pory"
-	waitmovement 0
+	setspeaker SP_NAME_VIKI
 # 157 "data/maps/Route101/scripts.pory"
+	msgbox Route101_Trigger_BlockPath_West_Text_0, MSGBOX_NPC
+# 158 "data/maps/Route101/scripts.pory"
+	applymovement Sister, Route101_EveryFrame_Movement_0
+# 159 "data/maps/Route101/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_West_Movement_1
+# 160 "data/maps/Route101/scripts.pory"
+	waitmovement 0
+# 161 "data/maps/Route101/scripts.pory"
 	releaseall
 	return
 
 
 Route101_Trigger_BlockPath_East::
-# 161 "data/maps/Route101/scripts.pory"
-	lock
-# 162 "data/maps/Route101/scripts.pory"
-	applymovement Sister, Route101_Trigger_BlockPath_West_Movement_0
-# 163 "data/maps/Route101/scripts.pory"
-	setspeaker SP_NAME_VIKI
-# 164 "data/maps/Route101/scripts.pory"
-	msgbox Route101_Trigger_BlockPath_West_Text_0, MSGBOX_NPC
 # 165 "data/maps/Route101/scripts.pory"
-	applymovement Sister, Route101_EveryFrame_Movement_0
+	lock
 # 166 "data/maps/Route101/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_East_Movement_0
+	applymovement Sister, Route101_Trigger_BlockPath_West_Movement_0
 # 167 "data/maps/Route101/scripts.pory"
-	waitmovement 0
+	setspeaker SP_NAME_VIKI
 # 168 "data/maps/Route101/scripts.pory"
+	msgbox Route101_Trigger_BlockPath_West_Text_0, MSGBOX_NPC
+# 169 "data/maps/Route101/scripts.pory"
+	applymovement Sister, Route101_EveryFrame_Movement_0
+# 170 "data/maps/Route101/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_East_Movement_0
+# 171 "data/maps/Route101/scripts.pory"
+	waitmovement 0
+# 172 "data/maps/Route101/scripts.pory"
 	releaseall
 	return
 
 
 Route101_Trigger_BlockPath_North::
-# 172 "data/maps/Route101/scripts.pory"
-	lock
-# 173 "data/maps/Route101/scripts.pory"
-	setspeaker SP_NAME_VIKI
-# 174 "data/maps/Route101/scripts.pory"
-	msgbox Route101_Trigger_BlockPath_North_Text_0, MSGBOX_NPC
-# 175 "data/maps/Route101/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_North_Movement_0
 # 176 "data/maps/Route101/scripts.pory"
-	waitmovement 0
+	lock
 # 177 "data/maps/Route101/scripts.pory"
+	setspeaker SP_NAME_VIKI
+# 178 "data/maps/Route101/scripts.pory"
+	msgbox Route101_Trigger_BlockPath_North_Text_0, MSGBOX_NPC
+# 179 "data/maps/Route101/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_North_Movement_0
+# 180 "data/maps/Route101/scripts.pory"
+	waitmovement 0
+# 181 "data/maps/Route101/scripts.pory"
 	releaseall
 	return
 
 
 Route101_Trigger_BlockPath_NorthTwo::
-# 181 "data/maps/Route101/scripts.pory"
-	lock
-# 182 "data/maps/Route101/scripts.pory"
-	setspeaker SP_NAME_VIKI
-# 183 "data/maps/Route101/scripts.pory"
-	msgbox Route101_Trigger_BlockPath_North_Text_0, MSGBOX_NPC
-# 184 "data/maps/Route101/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_East_Movement_0
 # 185 "data/maps/Route101/scripts.pory"
-	waitmovement 0
+	lock
 # 186 "data/maps/Route101/scripts.pory"
+	setspeaker SP_NAME_VIKI
+# 187 "data/maps/Route101/scripts.pory"
+	msgbox Route101_Trigger_BlockPath_North_Text_0, MSGBOX_NPC
+# 188 "data/maps/Route101/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, Route101_Trigger_BlockPath_East_Movement_0
+# 189 "data/maps/Route101/scripts.pory"
+	waitmovement 0
+# 190 "data/maps/Route101/scripts.pory"
 	releaseall
 	return
 
 
 Route101_EventTest_VikiWhatDoWeDo::
-# 190 "data/maps/Route101/scripts.pory"
+# 194 "data/maps/Route101/scripts.pory"
 	lock
-# 191 "data/maps/Route101/scripts.pory"
+# 195 "data/maps/Route101/scripts.pory"
 	setspeaker SP_NAME_VIKI
-# 192 "data/maps/Route101/scripts.pory"
+# 196 "data/maps/Route101/scripts.pory"
 	msgbox Route101_EventTest_VikiWhatDoWeDo_Text_0, MSGBOX_NPC
-# 193 "data/maps/Route101/scripts.pory"
+# 197 "data/maps/Route101/scripts.pory"
 	releaseall
 	return
 
@@ -500,27 +504,27 @@ Route101_EventScript_tulips_Bag_Movement_4:
 	face_down
 	step_end
 
-# 151 "data/maps/Route101/scripts.pory"
+# 155 "data/maps/Route101/scripts.pory"
 Route101_Trigger_BlockPath_West_Movement_0:
-# 151 "data/maps/Route101/scripts.pory"
+# 155 "data/maps/Route101/scripts.pory"
 	face_player
 	step_end
 
-# 155 "data/maps/Route101/scripts.pory"
+# 159 "data/maps/Route101/scripts.pory"
 Route101_Trigger_BlockPath_West_Movement_1:
-# 155 "data/maps/Route101/scripts.pory"
+# 159 "data/maps/Route101/scripts.pory"
 	walk_right
 	step_end
 
-# 166 "data/maps/Route101/scripts.pory"
+# 170 "data/maps/Route101/scripts.pory"
 Route101_Trigger_BlockPath_East_Movement_0:
-# 166 "data/maps/Route101/scripts.pory"
+# 170 "data/maps/Route101/scripts.pory"
 	walk_left
 	step_end
 
-# 175 "data/maps/Route101/scripts.pory"
+# 179 "data/maps/Route101/scripts.pory"
 Route101_Trigger_BlockPath_North_Movement_0:
-# 175 "data/maps/Route101/scripts.pory"
+# 179 "data/maps/Route101/scripts.pory"
 	walk_down
 	step_end
 
@@ -567,15 +571,15 @@ Route101_EventScript_tulips_Bag_Text_6:
 	.string "Now lets all go to the libary$"
 
 Route101_Trigger_BlockPath_West_Text_0:
-# 153 "data/maps/Route101/scripts.pory"
+# 157 "data/maps/Route101/scripts.pory"
 	.string "Where are you going? We can't just\n"
 	.string "leave her here!$"
 
 Route101_Trigger_BlockPath_North_Text_0:
-# 174 "data/maps/Route101/scripts.pory"
+# 178 "data/maps/Route101/scripts.pory"
 	.string "Hey idiot, don't walk into the grass\n"
 	.string "without Pokémon!$"
 
 Route101_EventTest_VikiWhatDoWeDo_Text_0:
-# 192 "data/maps/Route101/scripts.pory"
+# 196 "data/maps/Route101/scripts.pory"
 	.string "We gotta help her! But how?$"

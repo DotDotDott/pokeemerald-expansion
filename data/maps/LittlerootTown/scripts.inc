@@ -130,7 +130,7 @@ continueAfterWarpTest::
 # 80 "data/maps/LittlerootTown/scripts.pory"
 	playbgm MUS_HELP, TRUE
 # 81 "data/maps/LittlerootTown/scripts.pory"
-	removeobject 2, MAP_ROUTE101
+	hideobjectat 2, MAP_ROUTE101
 # 82 "data/maps/LittlerootTown/scripts.pory"
 	applymovement OBJ_EVENT_ID_PLAYER, continueAfterWarpTest_Movement_0
 # 83 "data/maps/LittlerootTown/scripts.pory"

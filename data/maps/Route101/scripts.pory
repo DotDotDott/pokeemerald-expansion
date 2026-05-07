@@ -147,7 +147,7 @@ script Route101_EventScript_tulips_Bag {
 }
 
 script Route101_afterWarp {
-	applymovement(OBJ_EVENT_ID_PLAYER, moves(player_face_up))
+	//applymovement(OBJ_EVENT_ID_PLAYER, moves(player_face_up))
 }
 
 script Route101_Trigger_BlockPath_West{
